@@ -1,8 +1,10 @@
-body{
-  background: red;
-}
+.HospesHead{
+  padding: 20px;
+  height: 500px;
 
-.test{
-  display: flex;
-  transition: all 0.3s ease
+  &-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
