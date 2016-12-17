@@ -15,7 +15,11 @@ gulp.task('serve', function (){
 //tarea procesar css
 gulp.task('css', function(){
   
-  var processors = [autoprefixer]
+  var processors = [
+    autoprefixer({
+      browsers: ['>5%', 'ie 8']
+      })
+  ]
 
   gulp.src('./src/*.css')
     .pipe(postcss(processors))
