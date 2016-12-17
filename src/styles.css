@@ -1,4 +1,19 @@
+:root{
+  --bg-body:#d5d5d5;
+  --bg-header:#373737;
+
+  --fontSize:1em;
+}
+
+/* -- Definiendo customs media queries --*/
+
+@custom-media --mobile (max-width: 500px);
+@custom-media --tablet (max-width: 650px);
+@custom-media --desktop (max-width: 800px);
+@custom-media --retina (-webkit-min-device-pixel-ratio:2);
+
 .HospesHead{
+  background: var(--bg-header); 
   padding: 20px;
   height: 500px;
 
@@ -7,4 +22,23 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  &-title{
+    font-size: calc(var(--fontSize)*2.5)
+  }
+  
+  &-img{
+    @media (--desktop){
+      width: 800px;
+    }
+  }
+
+}
+
+.HospesCont{
+  background-color: var(--bg-body);
+}
+
+.HospesFoot{
+  background-color: var(--bg-header);
 }

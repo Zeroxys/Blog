@@ -1,13 +1,41 @@
+/* -- Definiendo customs media queries --*/
+
 .HospesHead{
+  background: #373737; 
   padding: 20px;
   height: 500px;
+
 }
+
 .HospesHead-header{
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
-  justify-content: space-between;
+          justify-content: space-between;
+
+}
+
+.HospesHead-title{
+  font-size: 2.5em
+
+}
+
+@media (max-width: 800px){
+
+  .HospesHead-img{
+    width: 800px;
+
+  }
+
+}
+
+.HospesCont{
+  background-color: #d5d5d5;
+}
+
+.HospesFoot{
+  background-color: #373737;
 }
