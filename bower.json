@@ -1,0 +1,19 @@
+{
+  "name": "blog",
+  "description": "Personal Blog",
+  "main": "index.js",
+  "authors": [
+    "Miguel Zavala"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}
