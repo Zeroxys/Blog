@@ -5,20 +5,23 @@
     <title>Blog</title>
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body>
+  <body class="HospesBody">
 
     <section class="HospesHead">
       <header class="HospesHead-header u-wrapper">
         <h1 class="HospesHead-title">{Hospes}</h1>
         <nav class="HospesHead-navbar">
           <ul class="HospesHead-menu">
-            <li class="HospesHead-menu-item"><a href="#">Inicio</a></li>
-            <li class="HospesHead-menu-item"><a href="#">Sobre Mi</a></li>
-            <li class="HospesHead-menu-item"><a href="#">Blog</a></li>
+            <li class="HospesHead-menu-item"><a class="HospesHead-menu-item-link" href="#">Inicio</a></li>
+            <li class="HospesHead-menu-item"><a class="HospesHead-menu-item-link" href="#">Sobre Mi</a></li>
+            <li class="HospesHead-menu-item"><a class="HospesHead-menu-item-link" href="#">Blog</a></li>
           </ul>
         </nav>
       </header>
-      <img class="HospesHead-img" src="/img/blacks.jpg" alt="">
+    </section>
+    <section class="Hospes-portada">  
+      <img class="Hospes-portada-img" src="img/blacks.jpg">
+      </img>
     </section>
 
     <section class="HospesCont u-wrapper">
@@ -26,20 +29,22 @@
       <p class="HospesCont-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse necessitatibus saepe voluptatibus eligendi nam tempore minima et, inventore optio impedit! Reprehenderit neque in aperiam possimus, nam voluptatum molestiae, deleniti!</p>
     </section>
 
-    <footer class="HospesFoot">
-      <div class="HospesFoot-div u-wrapper">
-        <p class="HospesFoot-div-copyright">Copyright © 2012-2016 Miguel Zavala.</p>
+    <footer class="HospesFoot u-wrapper">
+      <div class="HospesFoot-div">        
+        <div class="HospesFoot-copyright">
+          <p>Copyright © 2012-2016 Miguel Zavala.</p>
+        </div>
+
         <div class="HospesFoot-icons">
-          <a class="HospesFoot-icon" href="#">
-            <img class="HospesFoot-icon-img" src="" alt="">
-            <p class="HospesFoot-icon-text">/Zeroxys</p>
+          <a class="HospesFoot-icons-a" target="_blank" href="https://github.com/Zeroxys">            
+            <img class="HospesFoot-icons-img" src="img/gitIcon.png" alt="">
           </a>
-          <a  class="HospesFoot-icon" href="#">
-            <img class="HospesFoot-icon-img" src="" alt="">
-            <p class="HospesFoot-icon-text">@MigueZav</p>
+          <a class="HospesFoot-icons-b" target="_blank" href="https://twitter.com/Miguezav">
+            <img class="HospesFoot-icons-img" src="img/twitIcon.png" alt="">
           </a>
         </div>
       </div>
+
     </footer>
 
   </body>

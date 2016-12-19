@@ -30,10 +30,16 @@ gulp.task('css', function(){
     .pipe(browserSync.stream())
 })
 
+gulp.task('img', function(){
+  gulp.src(['src/assets/img/*.png','src/assets/img/*.jpg'])
+    .pipe(gulp.dest('dist/img/'))
+})
+
 //tarea para vigilar cambios
 gulp.task('watch', function(){
+  gulp.watch('./src/assets/img', ['img']).on('change', browserSync.reload)
   gulp.watch('./src/*.css', ['css'])
   gulp.watch('./dist/*.html').on('change', browserSync.reload)
 })
 
-gulp.task('default', ['watch','serve'])
+gulp.task('default', ['watch','serve','img'])

@@ -1,44 +1,103 @@
 :root{
   --bg-body:#d5d5d5;
   --bg-header:#373737;
+  --fontBlogColor:#404b4d;
+  --fontWhiteColor:#d5d5d5;
 
   --fontSize:1em;
 }
 
 /* -- Definiendo customs media queries --*/
-
 @custom-media --mobile (max-width: 500px);
 @custom-media --tablet (max-width: 650px);
 @custom-media --desktop (max-width: 800px);
 @custom-media --retina (-webkit-min-device-pixel-ratio:2);
 
-.HospesHead{
-  background: var(--bg-header); 
-  padding: 20px;
-  height: 500px;
+.HospesBody{
+  background: var(--fontBlogColor);
+  padding: 0;
+  margin: 0;
 
-  &-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .u-wrapper{
+    padding: 0 1em 0 1em;
   }
 
-  &-title{
-    font-size: calc(var(--fontSize)*2.5)
-  }
-  
-  &-img{
-    @media (--desktop){
-      width: 800px;
+  .HospesHead{
+    background: var(--bg-header); 
+    height: 500px;
+    color:var(--fontWhiteColor);
+
+    &-header{
+      margin: 0 0 25px 0;
+      display: flex;
+      flex-flow:row wrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    &-title{
+      font-size: calc(var(--fontSize)*3);
+      margin: 0;
+    }
+    
+    &-navbar{
+    }
+    
+    &-menu{
+      display: flex;
+      flex-flow:row wrap;
+      &-item{
+        font-size: calc(var(--fontSize)*1.3);
+        list-style: none;
+        &-link{
+          color:var(--fontWhiteColor);
+          text-decoration:none;
+        }
+      }
     }
   }
 
-}
+  .Hospes-portada{
+    &-img{
+      background-image: url('/img/blacks.jpg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width:100%;
+    }
+  }
 
-.HospesCont{
-  background-color: var(--bg-body);
-}
+  .HospesCont{
+  }
 
-.HospesFoot{
-  background-color: var(--bg-header);
+  .HospesFoot{
+    background-color: var(--bg-header);
+    color: var(--fontWhiteColor);
+    height: 200px;
+
+    &-div{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    
+    &-copyright{
+      width: 400px;
+      border:1px solid white;
+      font-size: calc(var(--fontSize)*1.2);
+    }
+
+    &-icons{
+      border: 1px solid red;
+      &-a{
+        padding: 0px;
+      }
+
+      &-img{
+        width: 50px;
+        padding: 15px;
+      }
+    }
+  }
 }

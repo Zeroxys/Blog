@@ -1,41 +1,96 @@
 /* -- Definiendo customs media queries --*/
 
-.HospesHead{
-  background: #373737; 
-  padding: 20px;
-  height: 500px;
-
+.HospesBody{
+  background: #404b4d;
+  padding: 0;
+  margin: 0;
 }
 
-.HospesHead-header{
+.HospesBody .u-wrapper{
+  padding: 0 1em 0 1em;
+}
+
+.HospesBody .HospesHead{
+  background: #373737;
+  height: 500px;
+  color: #d5d5d5;
+}
+
+.HospesBody .HospesHead-header{
+  margin: 0 0 25px 0;
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  flex-flow:row wrap;
   -webkit-box-pack: justify;
           justify-content: space-between;
-
+  -webkit-box-align: baseline;
+          align-items: baseline;
 }
 
-.HospesHead-title{
-  font-size: 2.5em
-
+.HospesBody .HospesHead-title{
+  font-size: 3em;
+  margin: 0;
 }
 
-@media (max-width: 800px){
+.HospesBody .HospesHead-navbar{}
 
-  .HospesHead-img{
-    width: 800px;
-
-  }
-
+.HospesBody .HospesHead-menu{
+  display: -webkit-box;
+  display: flex;
+  flex-flow:row wrap;
 }
 
-.HospesCont{
-  background-color: #d5d5d5;
+.HospesBody .HospesHead-menu-item{
+  font-size: 1.3em;
+  list-style: none;
 }
 
-.HospesFoot{
+.HospesBody .HospesHead-menu-item-link{
+  color: #d5d5d5;
+  text-decoration:none;
+}
+
+.HospesBody .Hospes-portada-img{
+  background-image: url('/img/blacks.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width:100%;
+}
+
+.HospesBody .HospesCont{}
+
+.HospesBody .HospesFoot{
   background-color: #373737;
+  color: #d5d5d5;
+  height: 200px;
+}
+
+.HospesBody .HospesFoot-div{
+  display: -webkit-box;
+  display: flex;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+          align-items: flex-end;
+}
+
+.HospesBody .HospesFoot-copyright{
+  width: 400px;
+  border:1px solid white;
+  font-size: 1.2em;
+}
+
+.HospesBody .HospesFoot-icons{
+  border: 1px solid red;
+}
+
+.HospesBody .HospesFoot-icons-a{
+  padding: 0px;
+}
+
+.HospesBody .HospesFoot-icons-img{
+  width: 50px;
+  padding: 15px;
 }
