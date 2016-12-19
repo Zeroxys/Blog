@@ -14,7 +14,7 @@
 @custom-media --retina (-webkit-min-device-pixel-ratio:2);
 
 .HospesBody{
-  background: var(--fontBlogColor);
+  background: var(--fontwhiteColor);
   padding: 0;
   margin: 0;
 
@@ -24,7 +24,7 @@
 
   .HospesHead{
     background: var(--bg-header); 
-    height: 500px;
+    height: 100px;
     color:var(--fontWhiteColor);
 
     &-header{
@@ -68,6 +68,8 @@
   }
 
   .HospesCont{
+    background:var(--fontWhiteColor);
+    color:var(--fontBlogColor);
   }
 
   .HospesFoot{
