@@ -17,14 +17,17 @@
   background: var(--fontwhiteColor);
   padding: 0;
   margin: 0;
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 
   .u-wrapper{
-    padding: 0 1em 0 1em;
+    padding: 0 2em 0 2em;
   }
 
   .HospesHead{
     background: var(--bg-header); 
-    height: 100px;
+    height: 96px;
     color:var(--fontWhiteColor);
 
     &-header{
@@ -47,6 +50,7 @@
       display: flex;
       flex-flow:row wrap;
       &-item{
+        margin: 0 10px;
         font-size: calc(var(--fontSize)*1.3);
         list-style: none;
         &-link{
@@ -66,16 +70,30 @@
       width:100%;
     }
   }
+  
+  .HospesContents{
+    display: flex;    
+    &-About{
+      background:var(--fontWhiteColor);
+      color:var(--fontBlogColor);
+    }
 
-  .HospesCont{
-    background:var(--fontWhiteColor);
-    color:var(--fontBlogColor);
+    &-Content{
+      background:var(--bg-header);
+      color:var(--fontWhiteColor);
+    }
+
+    &-Works{
+      background:var(--fontWhiteColor);
+      color:var(--fontBlogColor);
+    }    
   }
+
 
   .HospesFoot{
     background-color: var(--bg-header);
     color: var(--fontWhiteColor);
-    height: 200px;
+    height: 150px;
 
     &-div{
       display: flex;
@@ -86,12 +104,10 @@
     
     &-copyright{
       width: 400px;
-      border:1px solid white;
       font-size: calc(var(--fontSize)*1.2);
     }
 
     &-icons{
-      border: 1px solid red;
       &-a{
         padding: 0px;
       }
