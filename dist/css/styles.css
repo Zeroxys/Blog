@@ -1,12 +1,12 @@
 /* -- Definiendo customs media queries --*/
 
 .HospesBody{
-  background: var(--fontwhiteColor);
+  background: #d5d5d5;
   padding: 0;
   margin: 0;
   display:-webkit-box;
   display:flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   -webkit-box-pack: center;
           justify-content: center;
 }
@@ -17,7 +17,7 @@
 
 .HospesBody .HospesHead{
   background: #373737;
-  height: 96px;
+  height: 93px;
   color: #d5d5d5;
 }
 
@@ -36,8 +36,6 @@
   font-size: 3em;
   margin: 0;
 }
-
-.HospesBody .HospesHead-navbar{}
 
 .HospesBody .HospesHead-menu{
   display: -webkit-box;
@@ -64,30 +62,46 @@
   width:100%;
 }
 
+.HospesBody .HospesBlogs{
+  background: #373737;
+  color: #d5d5d5;
+}
+
 .HospesBody .HospesContents{
+  border: 1px solid red;
   display: -webkit-box;
   display: flex;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
 }
 
 .HospesBody .HospesContents-About{
+  border:solid 1px red;
   background: #d5d5d5;
   color: #404b4d;
 }
 
-.HospesBody .HospesContents-Content{
+.HospesBody .HospesContents-Blog{
+  border:solid 1px red;
   background: #373737;
   color: #d5d5d5;
 }
 
 .HospesBody .HospesContents-Works{
+  border:solid 1px red;
   background: #d5d5d5;
   color: #404b4d;
+}
+
+.HospesBody .HospesContents-div{
+  width: 300px;
 }
 
 .HospesBody .HospesFoot{
   background-color: #373737;
   color: #d5d5d5;
-  height: 150px;
+  height: 100px;
 }
 
 .HospesBody .HospesFoot-div{
@@ -101,15 +115,14 @@
 }
 
 .HospesBody .HospesFoot-copyright{
-  width: 400px;
-  font-size: 1.2em;
+  border: 1px solid red;
+  font-size: 1em;
 }
 
 .HospesBody .HospesFoot-icons-a{
-  padding: 0px;
+  margin: 2px;
 }
 
 .HospesBody .HospesFoot-icons-img{
-  width: 50px;
-  padding: 15px;
+  width: 40px;
 }

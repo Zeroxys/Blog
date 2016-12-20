@@ -14,11 +14,11 @@
 @custom-media --retina (-webkit-min-device-pixel-ratio:2);
 
 .HospesBody{
-  background: var(--fontwhiteColor);
+  background:var(--fontWhiteColor);
   padding: 0;
   margin: 0;
   display:flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   justify-content: center;
 
   .u-wrapper{
@@ -27,7 +27,7 @@
 
   .HospesHead{
     background: var(--bg-header); 
-    height: 96px;
+    height: 93px;
     color:var(--fontWhiteColor);
 
     &-header{
@@ -41,9 +41,6 @@
     &-title{
       font-size: calc(var(--fontSize)*3);
       margin: 0;
-    }
-    
-    &-navbar{
     }
     
     &-menu{
@@ -71,29 +68,45 @@
     }
   }
   
+  .HospesBlogs{
+    background: var(--bg-header);
+    color: var(--fontWhiteColor);
+  }
+
   .HospesContents{
-    display: flex;    
+    border: 1px solid red;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
     &-About{
+      border:solid 1px red;
       background:var(--fontWhiteColor);
       color:var(--fontBlogColor);
     }
 
-    &-Content{
+    &-Blog{
+      border:solid 1px red;
       background:var(--bg-header);
       color:var(--fontWhiteColor);
     }
 
     &-Works{
+      border:solid 1px red;
       background:var(--fontWhiteColor);
       color:var(--fontBlogColor);
-    }    
+    }
+    
+    &-div{
+      width: 300px;
+    }
   }
 
 
   .HospesFoot{
     background-color: var(--bg-header);
     color: var(--fontWhiteColor);
-    height: 150px;
+    height: 100px;
 
     &-div{
       display: flex;
@@ -102,19 +115,18 @@
       align-items: flex-end;
     }
     
-    &-copyright{
-      width: 400px;
-      font-size: calc(var(--fontSize)*1.2);
+    &-copyright{ 
+      border: 1px solid red;
+      font-size: calc(var(--fontSize)*1);
     }
 
     &-icons{
       &-a{
-        padding: 0px;
+        margin: 2px; 
       }
 
       &-img{
-        width: 50px;
-        padding: 15px;
+        width: 40px;
       }
     }
   }
