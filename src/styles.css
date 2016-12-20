@@ -101,27 +101,34 @@
   }
 
   .HospesContents{
+    border: 1px solid red;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: flex-start;
 
     &-About{
+      border: 1px solid red;
       background:var(--fontWhiteColor);
       color:var(--fontBlogColor);
     }
 
     &-Blog{
+      border: 1px solid red;
       background:var(--bg-header);
       color:var(--fontWhiteColor);
     }
 
     &-Works{
+      border: 1px solid red;
       background:var(--fontWhiteColor);
       color:var(--fontBlogColor);
     }
     
     &-div{
+      border: 1px solid blue;
       width: 300px;
+      height: 300px;     
       &-title{
         font-size: responsive 25px 36px;
       }
