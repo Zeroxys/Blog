@@ -1,9 +1,12 @@
-const gulp = require('gulp')
-const postcss = require('gulp-postcss')
-const browserSync = require('browser-sync').create()
-const autoprefixer = require('autoprefixer')
-const nested = require('postcss-nested')
-const cssnext = require('postcss-cssnext')
+const gulp = require('gulp') // Gulp
+const postcss = require('gulp-postcss') // Postcss
+const browserSync = require('browser-sync').create() // Servidor de desarrollo
+const autoprefixer = require('autoprefixer') //Plugin Prefixers
+const nested = require('postcss-nested')// Instanciar clases css
+const cssnext = require('postcss-cssnext')//Plugin css next
+const rucksack = require('rucksack-css')//Responsive de textos
+const csswring = require('csswring') // Comprime el css final
+const mixins = require('postcss-mixins') //Plugin para mixins
 
 //servidor de desarrollo
 gulp.task('serve', function (){
@@ -18,10 +21,11 @@ gulp.task('serve', function (){
 gulp.task('css', function(){
   
   var processors = [
+    mixins,
     nested,
-    cssnext({
-      browsers: ['>5%', 'ie 8']
-    })
+    rucksack(),
+    cssnext({browsers: ['>5%', 'ie 8']}),
+    csswring()
   ]
 
   gulp.src('./src/*.css')

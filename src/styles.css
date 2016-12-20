@@ -13,6 +13,12 @@
 @custom-media --desktop (max-width: 800px);
 @custom-media --retina (-webkit-min-device-pixel-ratio:2);
 
+/*--Mixins--
+@define-mixin content $titleSize, $contentSize{
+
+}
+*/
+
 .HospesBody{
   background:var(--fontWhiteColor);
   padding: 0;
@@ -39,20 +45,29 @@
     }
 
     &-title{
-      font-size: calc(var(--fontSize)*3);
+      font-size: responsive 32px 70px;
       margin: 0;
+      padding: 0;
     }
     
     &-menu{
       display: flex;
       flex-flow:row wrap;
       &-item{
-        margin: 0 10px;
-        font-size: calc(var(--fontSize)*1.3);
+        margin: 0 8px;
+        font-size: responsive 16px 22px;
         list-style: none;
+
         &-link{
           color:var(--fontWhiteColor);
           text-decoration:none;
+          transition-property: all;
+          transition-duration: 0.5s;
+          transition-timing-function: ease-in-out;
+        }
+        &-link:hover{
+          border-top: 2px solid red;
+          color: red;
         }
       }
     }
@@ -60,10 +75,10 @@
 
   .Hospes-portada{
     &-img{
+      padding: 0px;
+      margin: 0px;
       background-image: url('/img/blacks.jpg');
       background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
       width:100%;
     }
   }
@@ -71,6 +86,12 @@
   .HospesBlogs{
     background: var(--bg-header);
     color: var(--fontWhiteColor);
+    &-title{
+      font-size: responsive 25px 36px;
+    }
+    &-content{
+      font-size: responsive 16px 22px;
+    }
   }
 
   .HospesContents{
@@ -83,6 +104,9 @@
       border:solid 1px red;
       background:var(--fontWhiteColor);
       color:var(--fontBlogColor);
+      &-title{
+        font-size: responsive 16px 22px;
+      }
     }
 
     &-Blog{
@@ -99,6 +123,12 @@
     
     &-div{
       width: 300px;
+      &-title{
+        font-size: responsive 25px 36px;
+      }
+      &-content{
+        font-size: responsive 16px 22px;
+      }
     }
   }
 
@@ -116,7 +146,6 @@
     }
     
     &-copyright{ 
-      border: 1px solid red;
       font-size: calc(var(--fontSize)*1);
     }
 
