@@ -14,11 +14,19 @@
 @custom-media --icons (max-width: 500px);
 @custom-media --retina (-webkit-min-device-pixel-ratio:2);
 
-/*--Mixins--
-@define-mixin content $titleSize, $contentSize{
-
+/*--Mixins--*/
+@define-mixin btn $color, $borderColor{
+  text-align: center;
+  width: 150px;
+  margin: 25px;
+  padding: 15px;
+  color: $color;
+  border: 2px solid $color;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: responsive 16px 22px;
 }
-*/
+
 
 .HospesBody{
   background:var(--fontWhiteColor);
@@ -102,6 +110,7 @@
       }
       &-content{
         font-size: responsive 16px 22px;
+        text-align: center;
       }
     }
   }
@@ -135,7 +144,7 @@
 
       @media (--mobile){
         width: auto;
-      }
+      }     
 
       &-title{
         font-size: responsive 25px 36px;
@@ -145,6 +154,26 @@
         text-align: center;
       }
     }
+
+    &-button{
+
+      @mixin btn var(--fontBlogColor);
+      &-b{
+        @mixin btn var(--fontWhiteColor);
+      }
+      &-b:hover{
+            background: var(--fontWhiteColor);
+            color: var(--fontBlogColor);
+            border-radius: 10px;
+          }      
+    }
+
+    &-button:hover{
+      background: var(--fontBlogColor);
+      color: var(--fontWhiteColor);
+      border-radius: 10px;
+    }    
+
   }
 
 

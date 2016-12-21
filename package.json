@@ -11,6 +11,7 @@
   "devDependencies": {
     "autoprefixer": "^6.5.4",
     "browser-sync": "^2.18.5",
+    "css-mqpacker": "^5.0.1",
     "csswring": "^5.1.0",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.2.0",

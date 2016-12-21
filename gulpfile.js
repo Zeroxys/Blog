@@ -6,6 +6,7 @@ const nested = require('postcss-nested')// Instanciar clases css
 const cssnext = require('postcss-cssnext')//Plugin css next
 const rucksack = require('rucksack-css')//Responsive de textos
 const csswring = require('csswring') // Comprime el css final
+const mqpacker = require('css-mqpacker')//Organiza las media queries
 const mixins = require('postcss-mixins') //Plugin para mixins
 
 //servidor de desarrollo
@@ -21,10 +22,11 @@ gulp.task('serve', function (){
 gulp.task('css', function(){
   
   var processors = [
-    mixins,
+    mixins(),
     nested,
     rucksack(),
     cssnext({browsers: ['>5%', 'ie 8']}),
+    mqpacker,
     csswring()
   ]
 
