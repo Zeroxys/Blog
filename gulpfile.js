@@ -35,7 +35,7 @@ gulp.task('css', function(){
 })
 
 gulp.task('img', function(){
-  gulp.src(['src/assets/img/*.png','src/assets/img/*.jpg'])
+  gulp.src(['src/assets/img/*.png','src/assets/img/*.jpg','src/assets/img/*.svg'])
     .pipe(gulp.dest('dist/img/'))
 })
 

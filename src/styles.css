@@ -101,32 +101,27 @@
   }
 
   .HospesContents{
-    border: 1px solid red;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: flex-start;
 
     &-About{
-      border: 1px solid red;
       background:var(--fontWhiteColor);
       color:var(--fontBlogColor);
     }
 
     &-Blog{
-      border: 1px solid red;
       background:var(--bg-header);
       color:var(--fontWhiteColor);
     }
 
     &-Works{
-      border: 1px solid red;
       background:var(--fontWhiteColor);
       color:var(--fontBlogColor);
     }
     
     &-div{
-      border: 1px solid blue;
       width: 300px;
       height: 300px;     
       &-title{
@@ -142,27 +137,36 @@
   .HospesFoot{
     background-color: var(--bg-header);
     color: var(--fontWhiteColor);
-    height: 100px;
-
-    &-div{
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
+    height: 180px;
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
+    align-items: center;
     
     &-copyright{ 
-      font-size: calc(var(--fontSize)*1);
+      padding-right: 35px;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid white;
+      font-size: responsive 12px 16px;
     }
 
     &-icons{
-      &-a{
-        margin: 2px; 
-      }
+      width: 200px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
 
-      &-img{
-        width: 40px;
+      &-icon{
+        width: 35px;
+        &-color{
+          fill:#d5d5d5;
+        }
+        &-color:hover{
+          fill:red;
+        }
       }
     }
+
   }
 }
