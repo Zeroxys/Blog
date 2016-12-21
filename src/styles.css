@@ -11,6 +11,7 @@
 @custom-media --mobile (max-width: 767px);
 @custom-media --tablet (max-width: 650px);
 @custom-media --desktop (max-width: 800px);
+@custom-media --icons (max-width: 500px);
 @custom-media --retina (-webkit-min-device-pixel-ratio:2);
 
 /*--Mixins--
@@ -35,7 +36,7 @@
     background: var(--bg-header); 
     height: 93px;
     color:var(--fontWhiteColor);
-
+    
     &-header{
       margin: 0 0 25px 0;
       display: flex;
@@ -92,20 +93,26 @@
   .HospesBlogs{
     background: var(--bg-header);
     color: var(--fontWhiteColor);
-    &-title{
-      font-size: responsive 25px 36px;
-    }
-    &-content{
-      font-size: responsive 16px 22px;
+    &-contents{
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;    
+      &-title{
+        font-size: responsive 25px 36px;
+      }
+      &-content{
+        font-size: responsive 16px 22px;
+      }
     }
   }
 
   .HospesContents{
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    @media (--mobile){
     flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-
+    }
     &-About{
       background:var(--fontWhiteColor);
       color:var(--fontBlogColor);
@@ -121,14 +128,21 @@
       color:var(--fontBlogColor);
     }
     
-    &-div{
-      width: 300px;
-      height: 300px;     
+    &-div{     
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+
+      @media (--mobile){
+        width: auto;
+      }
+
       &-title{
         font-size: responsive 25px 36px;
       }
       &-content{
         font-size: responsive 16px 22px;
+        text-align: center;
       }
     }
   }
@@ -146,9 +160,12 @@
     &-copyright{ 
       padding-right: 35px;
       display: flex;
-      flex-direction: column;
+      flex-flow: column nowrap;
       border-right: 1px solid white;
       font-size: responsive 12px 16px;
+      @media (--icons){
+        padding-right: 20px; 
+      }
     }
 
     &-icons{
@@ -156,7 +173,10 @@
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-around;
-
+      @media (--icons){
+        flex-flow: column nowrap;
+        width: 15px;
+      }
       &-icon{
         width: 35px;
         &-color{
