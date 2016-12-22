@@ -10,6 +10,10 @@ const mqpacker = require('css-mqpacker')//Organiza las media queries
 const mixins = require('postcss-mixins') //Plugin para mixins
 const livereload = require('gulp-livereload')
 const nodemon = require('gulp-nodemon')
+const babel = require('babelify')
+const browserify = require('browserify')
+const rename = require('gulp-rename')
+const source = require('vinyl-source-stream')
 
 //servidor de desarrollo
 /*gulp.task('serve', function (){
@@ -20,6 +24,7 @@ const nodemon = require('gulp-nodemon')
     })
 })*/
 
+//Inicializa servidor en desarrollo
 gulp.task('serve', function(){
   livereload({start : true})
     nodemon({
@@ -56,11 +61,21 @@ gulp.task('img', function(){
     .pipe(gulp.dest('dist/img/'))
 })
 
+//Tarea para crear bundle con browserify y babel
+gulp.task('scripts', function(){
+  browserify('./src/index.js')
+    .transform(babel)
+    .bundle()
+    .pipe(source('index.js'))
+    .pipe(rename('app.js'))
+    .pipe(gulp.dest('./dist/js'))
+})
+
 //tarea para vigilar cambios
 gulp.task('watch', function(){
   //gulp.watch('./src/assets/img', ['img']).on('change', browserSync.reload)
-  gulp.watch('./src/*.css', ['css'])
   //gulp.watch('./dist/*.html').on('change', browserSync.reload)
+  gulp.watch('./src/*.css', ['css'])
 })
 
-gulp.task('default', ['watch','serve','img'])
+gulp.task('default', ['watch','serve','scripts','img'])
