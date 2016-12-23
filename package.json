@@ -4,7 +4,9 @@
   "description": "Personal Blog",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"gulp",
+    "start": "gulp watch | node server.js"
   },
   "author": "Miguel Zavala",
   "license": "MIT",
@@ -24,11 +26,13 @@
     "postcss-mixins": "^5.4.0",
     "postcss-nested": "^1.0.0",
     "rucksack-css": "^0.9.1",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.8.0"
   },
   "dependencies": {
     "express": "^4.14.0",
     "morgan": "^1.7.0",
+    "page": "^1.7.1",
     "serve-static": "^1.11.1"
   }
 }

@@ -8,12 +8,13 @@ const rucksack = require('rucksack-css')//Responsive de textos
 const csswring = require('csswring') // Comprime el css final
 const mqpacker = require('css-mqpacker')//Organiza las media queries
 const mixins = require('postcss-mixins') //Plugin para mixins
-const livereload = require('gulp-livereload')
-const nodemon = require('gulp-nodemon')
-const babel = require('babelify')
-const browserify = require('browserify')
-const rename = require('gulp-rename')
-const source = require('vinyl-source-stream')
+const livereload = require('gulp-livereload')//Recarga y escucha cambios en el navegador
+const nodemon = require('gulp-nodemon') // Recarga cambios en el servidor
+const babel = require('babelify') // Babel
+const browserify = require('browserify')//Modularizamos y hacemos bundle final
+const rename = require('gulp-rename') // Renonbramos archivos pasados a gulp
+const source = require('vinyl-source-stream') // Las tareas realizadas con browserify las podemos volver a tomar con gulp
+const watchify = require('watchify')//Queda esperando cambios en los ficheros
 
 //servidor de desarrollo
 /*gulp.task('serve', function (){
@@ -25,7 +26,7 @@ const source = require('vinyl-source-stream')
 })*/
 
 //Inicializa servidor en desarrollo
-gulp.task('serve', function(){
+/*gulp.task('serve', function(){
   livereload({start : true})
     nodemon({
       script:'server.js',
@@ -36,7 +37,7 @@ gulp.task('serve', function(){
           .pipe(livereload())
         console.log('Reiniciando el Servidor')  
       })
-})
+})*/
 
 //tarea procesar css
 gulp.task('css', function(){
@@ -61,21 +62,45 @@ gulp.task('img', function(){
     .pipe(gulp.dest('dist/img/'))
 })
 
-//Tarea para crear bundle con browserify y babel
-gulp.task('scripts', function(){
-  browserify('./src/index.js')
+var compile = function (watch){
+  var bundle = watchify(browserify('./src/index.js'));
+  
+  function rebundle (){
+    bundle
     .transform(babel)
     .bundle()
     .pipe(source('index.js'))
     .pipe(rename('app.js'))
     .pipe(gulp.dest('./dist/js'))
+    console.log('Rebundle...')  
+  }
+
+  if  (watch){
+    bundle.on('update', function(){
+      rebundle()
+    })
+    console.log('Rebundling...')
+  }
+  rebundle()
+
+}
+
+//Ejecuta la funcion compile y hace bundling
+gulp.task('bundling', function(){
+  return compile()
+})
+
+//Watch
+gulp.task('watch', function(){
+  compile(true)
 })
 
 //tarea para vigilar cambios
-gulp.task('watch', function(){
+gulp.task('watchFiles', function(){
   //gulp.watch('./src/assets/img', ['img']).on('change', browserSync.reload)
   //gulp.watch('./dist/*.html').on('change', browserSync.reload)
   gulp.watch('./src/*.css', ['css'])
 })
 
-gulp.task('default', ['watch','serve','scripts','img'])
+//Tareas por defecto
+gulp.task('default', ['watchFiles','serve','img'])

@@ -12,6 +12,9 @@ app.use(serveStatic('./dist/', {'index': ['index.html']}))
 app.get('/', (req,res) => {
 })
 
+app.get('/blog', (req,res) => {
+})
+
 app.listen(port, (err) => {
   if (err) {
     console.log(`Ha ocurrido el siguiente problema :  ${err}`)
