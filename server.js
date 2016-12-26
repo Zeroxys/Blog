@@ -12,7 +12,16 @@ app.use(serveStatic('./dist/', {'index': ['index.html']}))
 app.get('/', (req,res) => {
 })
 
+app.get('/home', (req,res) => {
+})
+
+app.get('/about', (req,res) => {
+})
+
 app.get('/blog', (req,res) => {
+})
+
+app.get('/works', (req,res) => {
 })
 
 app.listen(port, (err) => {

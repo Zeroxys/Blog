@@ -154,6 +154,7 @@
       &-content{
         font-size: responsive 16px 22px;
         text-align: center;
+        height: 200px;
       }
     }
 

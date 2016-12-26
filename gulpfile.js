@@ -1,6 +1,6 @@
 const gulp = require('gulp') // Gulp
 const postcss = require('gulp-postcss') // Postcss
-//const browserSync = require('browser-sync').create() // Servidor de desarrollo
+const browserSync = require('browser-sync').create() // Servidor de desarrollo
 const autoprefixer = require('autoprefixer') //Plugin Prefixers
 const nested = require('postcss-nested')// Instanciar clases css
 const cssnext = require('postcss-cssnext')//Plugin css next
@@ -15,15 +15,16 @@ const browserify = require('browserify')//Modularizamos y hacemos bundle final
 const rename = require('gulp-rename') // Renonbramos archivos pasados a gulp
 const source = require('vinyl-source-stream') // Las tareas realizadas con browserify las podemos volver a tomar con gulp
 const watchify = require('watchify')//Queda esperando cambios en los ficheros
+const es2015 = require('babel-preset-es2015')
 
 //servidor de desarrollo
-/*gulp.task('serve', function (){
+gulp.task('serve', function (){
   browserSync.init({
       server:{
         baseDir:'./dist'
       }
     })
-})*/
+})
 
 //Inicializa servidor en desarrollo
 /*gulp.task('serve', function(){
@@ -63,26 +64,29 @@ gulp.task('img', function(){
 })
 
 var compile = function (watch){
-  var bundle = watchify(browserify('./src/index.js'));
+  var bundle = watchify(browserify('./src/js/index.js'));
   
   function rebundle (){
     bundle
-    .transform(babel)
-    .bundle()
-    .pipe(source('index.js'))
-    .pipe(rename('app.js'))
-    .pipe(gulp.dest('./dist/js'))
-    console.log('Rebundle...')  
+      .transform(babel,{presets:['es2015']})
+      .bundle()
+      .on('error', function(err){
+          console.log(err);
+          this.emit('end')
+        })
+      .pipe(source('index.js'))
+      .pipe(rename('app.js'))
+      .pipe(gulp.dest('./dist/js'));
+    console.log('Finish...')  
   }
 
   if  (watch){
-    bundle.on('update', function(){
+      bundle.on('update', function(){
+      console.log('Rebundling...')
       rebundle()
     })
-    console.log('Rebundling...')
   }
   rebundle()
-
 }
 
 //Ejecuta la funcion compile y hace bundling
@@ -97,8 +101,8 @@ gulp.task('watch', function(){
 
 //tarea para vigilar cambios
 gulp.task('watchFiles', function(){
-  //gulp.watch('./src/assets/img', ['img']).on('change', browserSync.reload)
-  //gulp.watch('./dist/*.html').on('change', browserSync.reload)
+  gulp.watch('./src/assets/img', ['img']).on('change', browserSync.reload)
+  gulp.watch('./dist/*.html').on('change', browserSync.reload)
   gulp.watch('./src/*.css', ['css'])
 })
 
