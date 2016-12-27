@@ -124,9 +124,35 @@
     @media (--mobile){
     flex-flow: row wrap;
     }
+
     &-About{
       background:var(--fontWhiteColor);
       color:var(--fontBlogColor);
+
+      &-content{
+        padding-top: 50px; 
+        border: 1px solid red;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        @media (--mobile){
+        flex-flow: column wrap;
+        }        
+
+        &-img{
+          border: 1px solid red;
+          width: 350px;
+          height: 500px;
+        }
+
+        &-text{
+          display: flex;
+          flex-flow: column wrap;
+          align-items: center;
+        }
+
+      }
     }
 
     &-Blog{

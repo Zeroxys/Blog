@@ -1,132 +1,36 @@
 const yo = require('yo-yo');
 
-module.exports = yo`<section>
-  <h1>Aqui ira el about</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur
-   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita
-    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!
+module.exports = 
+yo`<section class="HospesContents-About-content u-wrapper">
 
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-  </p>
-
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur
-   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita
-    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-  </p>
-
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur
-   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita
-    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-  </p>
-
+  <img class="HospesContents-About-content-img" src="img/dev.jpg"/>
+  
+  <div class="HospesContents-About-content-text u-wrapper">
+    <h1 class="HospesContents-About-content-title">Lorem ipsum dolor</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur
-   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita
-    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!
+     voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita
+      repellat deleniti officia ab, commodi inventore facilis repudiandae qui!
+    </p>
+    <h1>asdsadas</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+     Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,
+     officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus
+     adipisci et quaerat.</p>
+    <h1>asdsadas</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+     Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,
+     officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus
+     adipisci et quaerat.</p>
+    <h1>asdsadas</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+     Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,
+     officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus
+     adipisci et quaerat.</p>
+    <h1>asdsadas</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+     Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,
+     officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus
+     adipisci et quaerat.</p>                   
+  </div>
 
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-  </p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur
-   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita
-    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-  </p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur
-   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita
-    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde
-    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo
-    beatae natus omnis officiis, eaque repellendus.
-  </p>    
-
-  <a href="/">Volver</a>
 </section>`;
