@@ -131,7 +131,6 @@
 
       &-content{
         padding-top: 50px; 
-        border: 1px solid red;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
@@ -141,7 +140,6 @@
         }        
 
         &-img{
-          border: 1px solid red;
           width: 350px;
           height: 500px;
         }
@@ -158,6 +156,70 @@
     &-Blog{
       background:var(--bg-header);
       color:var(--fontWhiteColor);
+      
+      &-Principal{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        &-titleContent{
+          color: var(--bg-header);
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center;
+          &-title{
+            margin:0;
+            font-size: responsive 18px 32px;
+          }
+          &-text{
+            margin: 0;
+            font-size: responsive 16px 20px;
+          }
+        }
+
+        &-Contenido{
+          margin: 0 250px;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+
+      &-Articulos{
+        background: var(--bg-header);
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 50px; 
+        width: 400px;
+        height: 650px;
+
+        &-img{
+          width: 400px;
+          height: 293px;
+        }
+
+        &-content{
+          border: 1px solid green;
+          &-title{
+            margin: 0;
+            padding:0;
+            color: var(--fontWhiteColor);
+            font-size:responsive 18px 32px;
+          }
+          &-text{
+            margin: 0;
+            padding:0;
+            color: var(--fontWhiteColor);
+            font-size:responsive 12px 16px;
+          }
+        }
+        &-btn{
+          @mixin btn var(--fontBlogColor);
+        }
+      }
+
     }
 
     &-Works{
@@ -192,7 +254,7 @@
       }
       &-b:hover{
             background: var(--fontWhiteColor);
-            color: var(--fontBlogColor);
+            color: var(--bg-header);
             border-radius: 10px;
           }      
     }
