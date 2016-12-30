@@ -13,12 +13,16 @@ app.get('/', (req,res) => {
 });
 
 app.get('/about', (req,res) => {
+  res.status(200).sendfile('./dist/index.html');
+  
 });
 
 app.get('/blog', (req,res) => {
+  res.status(200).sendfile('./dist/index.html');
 });
 
 app.get('/works', (req,res) => {
+  res.status(200).sendfile('./dist/index.html');
 });
 
 app.listen(port, (err) => {

@@ -20,25 +20,11 @@ const es2015 = require('babel-preset-es2015')
 //servidor de desarrollo
 gulp.task('serve', function (){
   browserSync.init({
-      server:{
-        baseDir:'./dist'
-      }
-    })
+    server:{
+      baseDir:'./dist'
+    }
+  })
 })
-
-//Inicializa servidor en desarrollo
-/*gulp.task('serve', function(){
-  livereload({start : true})
-    nodemon({
-      script:'server.js',
-      ext:'js',
-      env:{'NODE_ENV': 'development'}
-    }).on('restart',function(){
-        gulp.src('server.js')
-          .pipe(livereload())
-        console.log('Reiniciando el Servidor')  
-      })
-})*/
 
 //tarea procesar css
 gulp.task('css', function(){
@@ -47,7 +33,7 @@ gulp.task('css', function(){
     mixins(),
     nested,
     rucksack(),
-    cssnext({browsers: ['>5%', 'ie 8']}),
+    cssnext({browsers: ['>5%']}),
     mqpacker,
     csswring()
   ]
@@ -55,14 +41,16 @@ gulp.task('css', function(){
   gulp.src('./src/*.css')
     .pipe(postcss(processors))
     .pipe(gulp.dest('./dist/css'))
-    //.pipe(browserSync.stream())
+    .pipe(browserSync.stream())
 })
 
+//Tarea coloca imagenes de src a dist
 gulp.task('img', function(){
   gulp.src(['src/assets/img/*.png','src/assets/img/*.jpg','src/assets/img/*.svg'])
     .pipe(gulp.dest('dist/img/'))
 })
 
+//Funcion que hace el bundle de js
 var compile = function (watch){
   var bundle = watchify(browserify('./src/js/index.js'));
   
@@ -76,12 +64,13 @@ var compile = function (watch){
         })
       .pipe(source('index.js'))
       .pipe(rename('app.js'))
-      .pipe(gulp.dest('./dist/js'));
+      .pipe(gulp.dest('./dist/js'))
+
     console.log('Finish...')  
   }
 
   if  (watch){
-      bundle.on('update', function(){
+    bundle.on('update', function(){
       console.log('Rebundling...')
       rebundle()
     })
@@ -91,20 +80,20 @@ var compile = function (watch){
 
 //Ejecuta la funcion compile y hace bundling
 gulp.task('bundling', function(){
-  return compile()
+  return compile();
 })
 
-//Watch
+//Watch manda true a compile para que almenes se ejecute una vez
 gulp.task('watch', function(){
-  compile(true)
+  compile(true);
 })
 
 //tarea para vigilar cambios
 gulp.task('watchFiles', function(){
-  gulp.watch('./src/assets/img', ['img']).on('change', browserSync.reload)
-  gulp.watch('./dist/*.html').on('change', browserSync.reload)
-  gulp.watch('./src/*.css', ['css'])
+  gulp.watch('./src/assets/img', ['img']);
+  gulp.watch('./dist/*.html',['watch']);
+  gulp.watch('./src/*.css', ['css']);
 })
 
 //Tareas por defecto
-gulp.task('default', ['watchFiles','serve','img'])
+gulp.task('default', ['watchFiles','serve','img','css']);
