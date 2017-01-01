@@ -10,6 +10,7 @@ app.use(morgan(':status :req[x-real-ip] :method :response-time ms :url'));
 app.use(serveStatic('./dist/', {'index': ['index.html']}));
 
 app.get('/', (req,res) => {
+  res.status(200).sendfile('./dist/index.html')
 });
 
 app.get('/about', (req,res) => {
