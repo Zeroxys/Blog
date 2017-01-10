@@ -1,6 +1,7 @@
 const yo = require('yo-yo');
+const landing = require('../landing');
 
-module.exports = 
+const box = 
 yo`<section class="HospesContents-About-content u-wrapper">
 
   <img class="HospesContents-About-content-img" src="img/dev.jpg"/>
@@ -34,3 +35,5 @@ yo`<section class="HospesContents-About-content u-wrapper">
   </div>
 
 </section>`;
+
+module.exports = landing(box);

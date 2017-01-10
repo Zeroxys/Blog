@@ -5,7 +5,7 @@ const title = require('title');
 
 page('/', (ctx,next) => {
   title('Blog');
-  const contenido = document.getElementById('Contenido');
+  var contenido = document.getElementById('Contenido');
 
   empty(contenido).appendChild(template);
 })

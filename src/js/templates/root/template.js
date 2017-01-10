@@ -1,7 +1,10 @@
 const yo = require('yo-yo');
 
-module.exports = yo`<section id="Contenido">
-      
+module.exports =
+yo`<section id="Contenido">
+    
+    <section class="landing">
+
       <section class="HospesPort" id="Portada">  
         <div class="HospesPort-img">
           
@@ -47,6 +50,7 @@ module.exports = yo`<section id="Contenido">
             <a class="HospesContents-button" href="/works">Ver Mas..</a>
           </div>        
         </section>
-
       </section>
-    </section>`;
+
+    </section>
+</section>`;

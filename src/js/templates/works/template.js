@@ -1,7 +1,8 @@
 const yo = require('yo-yo');
+const landing = require('../landing');
 
-module.exports = yo`<section>
-  <h1>Aqui ira la seccion de works</h1>
+const block = yo`<section>
+  <h1>Aqui ira la seccion de works funcion</h1>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur
    voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita
     repellat deleniti officia ab, commodi inventore facilis repudiandae qui!
@@ -129,3 +130,5 @@ module.exports = yo`<section>
   </p>  
   <a href="/">Volver</a>
 </section>`;
+
+module.exports = landing(block);

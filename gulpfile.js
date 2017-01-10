@@ -33,7 +33,7 @@ gulp.task('css', function(){
     mixins(),
     nested,
     rucksack(),
-    cssnext({browsers:['>5%', 'ie 8','last 5 versions']}),
+    cssnext({browsers:['>5%', 'ie >= 8']}),
     mqpacker,
     csswring()
   ]
