@@ -7,27 +7,38 @@ page('/blog', function(ctx,next){
   title('Blog-about');
   var cont = document.getElementById('Contenido');
 
+
   var blogs = [{name:'title',
-                url:'http://bit.ly/2j3Ho0X',
-                blog:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim laudantium ipsum saepe dolore, expedita ab officiis porro doloremque dignissimos dolor molestias libero incidunt, natus nemo officia nesciunt, recusandae veniam quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim laudantium ipsum saepe dolore, expedita ab officiis porro doloremque dignissimos dolor molestias libero incidunt, natus nemo officia nesciunt, recusandae veniam quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim laudantium ipsum saepe dolore, expedita ab officiis porro doloremque dignissimos dolor molestias libero incidunt, natus nemo officia nesciunt, recusandae veniam quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim laudantium ipsum saepe dolore, expedita ab officiis porro doloremque dignissimos dolor molestias libero incidunt, natus nemo officia nesciunt, recusandae veniam quas.',
+                imageUrl:'http://bit.ly/2j3Ho0X',
+                previewBlog:'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
+                urlBlog:'/about',
                 likes:16,
                 comments:8
                },
                
                {name:'title 2',
-                url:'http://bit.ly/2j3Ho0X',
-                blog:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim laudantium ipsum saepe dolore, expedita ab officiis porro doloremque dignissimos dolor molestias libero incidunt, natus nemo officia nesciunt, recusandae veniam quas.',
-                likes:2,
-                comments:3
+                imageUrl:'http://bit.ly/2j3Ho0X',
+                previewBlog:'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
+                urlBlog:'/about',
+                likes:16,
+                comments:8
                },
 
                {name:'title 3',
-                url:'http://bit.ly/2j3Ho0X',
-                blog:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim laudantium ipsum saepe dolore, expedita ab officiis porro doloremque dignissimos dolor molestias libero incidunt, natus nemo officia nesciunt, recusandae veniam quas.',
-                likes:2,
-                comments:3
+                imageUrl:'http://bit.ly/2j3Ho0X',
+                previewBlog:'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
+                urlBlog:'/about',
+                likes:16,
+                comments:8
+               },
+               
+                {name:'title 4',
+                imageUrl:'http://bit.ly/2j3Ho0X',
+                previewBlog:'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
+                urlBlog:'/about',
+                likes:16,
+                comments:8
                }];
 
-  console.log(blogs)
   empty(cont).appendChild(template(blogs));
 });

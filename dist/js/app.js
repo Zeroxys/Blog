@@ -2597,7 +2597,7 @@ module.exports = function (blogs) {
 },{"yo-yo":15}],21:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['<section class="HospesContents-Blog-Articulos">\n        <img class="HospesContents-Blog-Articulos-img" src=', '/>\n\n        <section class="HospesContents-Blog-Articulos-content">\n\n          <h1 class="HospesContents-Blog-Articulos-content-title">', '</h1>\n          \n          <p class="HospesContents-Blog-Articulos-content-text" id="text-box">\n            ', '\n          </p>\n\n        </section>\n        <a class="HospesContents-Blog-Articulos-btn" href="/">Ver mas...</a>\n        \n        <section class="HospesContents-Blog-Articulos-content-commentBox">\n          \n          <div>\n            <p>', ' Me gusta</p>\n          </div>\n\n          <div>\n            <p>', ' Comentarios</p>\n          </div>\n\n        </section>\n\n      </section>'], ['<section class="HospesContents-Blog-Articulos">\n        <img class="HospesContents-Blog-Articulos-img" src=', '/>\n\n        <section class="HospesContents-Blog-Articulos-content">\n\n          <h1 class="HospesContents-Blog-Articulos-content-title">', '</h1>\n          \n          <p class="HospesContents-Blog-Articulos-content-text" id="text-box">\n            ', '\n          </p>\n\n        </section>\n        <a class="HospesContents-Blog-Articulos-btn" href="/">Ver mas...</a>\n        \n        <section class="HospesContents-Blog-Articulos-content-commentBox">\n          \n          <div>\n            <p>', ' Me gusta</p>\n          </div>\n\n          <div>\n            <p>', ' Comentarios</p>\n          </div>\n\n        </section>\n\n      </section>']);
+var _templateObject = _taggedTemplateLiteral(['<section class="HospesContents-Blog-Articulos">\n        <img class="HospesContents-Blog-Articulos-img" src=', '/>\n\n        <section class="HospesContents-Blog-Articulos-content">\n\n          <h1 class="HospesContents-Blog-Articulos-content-title">', '</h1>\n          \n          <p class="HospesContents-Blog-Articulos-content-text" id="text-box">\n            ', '\n          </p>\n\n        </section>\n        <a class="HospesContents-Blog-Articulos-btn" href=', '>Ver mas...</a>\n        \n        <section class="HospesContents-Blog-Articulos-content-commentBox">\n          \n          <div>\n            <p>', ' Me gusta</p>\n          </div>\n\n          <div>\n            <p>', ' Comentarios</p>\n          </div>\n\n        </section>\n\n      </section>'], ['<section class="HospesContents-Blog-Articulos">\n        <img class="HospesContents-Blog-Articulos-img" src=', '/>\n\n        <section class="HospesContents-Blog-Articulos-content">\n\n          <h1 class="HospesContents-Blog-Articulos-content-title">', '</h1>\n          \n          <p class="HospesContents-Blog-Articulos-content-text" id="text-box">\n            ', '\n          </p>\n\n        </section>\n        <a class="HospesContents-Blog-Articulos-btn" href=', '>Ver mas...</a>\n        \n        <section class="HospesContents-Blog-Articulos-content-commentBox">\n          \n          <div>\n            <p>', ' Me gusta</p>\n          </div>\n\n          <div>\n            <p>', ' Comentarios</p>\n          </div>\n\n        </section>\n\n      </section>']);
 
 function _taggedTemplateLiteral(strings, raw) {
         return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
@@ -2607,7 +2607,7 @@ function _taggedTemplateLiteral(strings, raw) {
 var yo = require('yo-yo');
 
 module.exports = function template(blog) {
-        return yo(_templateObject, blog.url, blog.name, blog.blog, blog.likes, blog.comments);
+        return yo(_templateObject, blog.imageUrl, blog.name, blog.previewBlog, blog.urlBlog, blog.likes, blog.comments);
 };
 
 },{"yo-yo":15}],22:[function(require,module,exports){
@@ -2623,23 +2623,31 @@ page('/blog', function (ctx, next) {
   var cont = document.getElementById('Contenido');
 
   var blogs = [{ name: 'title',
-    url: 'http://bit.ly/2j3Ho0X',
-    blog: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim laudantium ipsum saepe dolore, expedita ab officiis porro doloremque dignissimos dolor molestias libero incidunt, natus nemo officia nesciunt, recusandae veniam quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim laudantium ipsum saepe dolore, expedita ab officiis porro doloremque dignissimos dolor molestias libero incidunt, natus nemo officia nesciunt, recusandae veniam quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim laudantium ipsum saepe dolore, expedita ab officiis porro doloremque dignissimos dolor molestias libero incidunt, natus nemo officia nesciunt, recusandae veniam quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim laudantium ipsum saepe dolore, expedita ab officiis porro doloremque dignissimos dolor molestias libero incidunt, natus nemo officia nesciunt, recusandae veniam quas.',
+    imageUrl: 'http://bit.ly/2j3Ho0X',
+    previewBlog: 'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
+    urlBlog: '/about',
     likes: 16,
     comments: 8
   }, { name: 'title 2',
-    url: 'http://bit.ly/2j3Ho0X',
-    blog: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim laudantium ipsum saepe dolore, expedita ab officiis porro doloremque dignissimos dolor molestias libero incidunt, natus nemo officia nesciunt, recusandae veniam quas.',
-    likes: 2,
-    comments: 3
+    imageUrl: 'http://bit.ly/2j3Ho0X',
+    previewBlog: 'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
+    urlBlog: '/about',
+    likes: 16,
+    comments: 8
   }, { name: 'title 3',
-    url: 'http://bit.ly/2j3Ho0X',
-    blog: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim laudantium ipsum saepe dolore, expedita ab officiis porro doloremque dignissimos dolor molestias libero incidunt, natus nemo officia nesciunt, recusandae veniam quas.',
-    likes: 2,
-    comments: 3
+    imageUrl: 'http://bit.ly/2j3Ho0X',
+    previewBlog: 'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
+    urlBlog: '/about',
+    likes: 16,
+    comments: 8
+  }, { name: 'title 4',
+    imageUrl: 'http://bit.ly/2j3Ho0X',
+    previewBlog: 'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
+    urlBlog: '/about',
+    likes: 16,
+    comments: 8
   }];
 
-  console.log(blogs);
   empty(cont).appendChild(template(blogs));
 });
 

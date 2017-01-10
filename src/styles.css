@@ -220,10 +220,8 @@
           &-text{
             width:350px;
             height: 210px;
-            overflow: hidden;
-            white-space: normal;
-            text-overflow: ellipsis;
             font-size:responsive 12px 15px;
+            overflow : hidden;
           }
           &-commentBox{
             width: 400px;
