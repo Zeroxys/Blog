@@ -26,6 +26,10 @@ app.get('/works', (req,res) => {
   res.status(200).sendfile('./dist/index.html');
 });
 
+app.get('/content', (req,res) => {
+  res.status(200).sendfile('./dist/index.html');
+});
+
 app.listen(port, (err) => {
   if (err) {
     console.log(`Ha ocurrido el siguiente problema :  ${err}`)

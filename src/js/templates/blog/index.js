@@ -11,7 +11,7 @@ page('/blog', function(ctx,next){
   var blogs = [{name:'title',
                 imageUrl:'http://bit.ly/2j3Ho0X',
                 previewBlog:'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
-                urlBlog:'/about',
+                urlBlog:'/content',
                 likes:16,
                 comments:8
                },

@@ -121,7 +121,8 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    @media (--mobile){
+
+    @media (--desktop){
     flex-flow: row wrap;
     }
 
@@ -130,24 +131,33 @@
       color:var(--fontBlogColor);
 
       &-content{
-        padding-top: 50px; 
+        border: 1px solid red;
+        height: 1050px;
+        margin:36px 0 36px 0;  
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
         justify-content: space-between;
         align-items: center;
-        @media (--mobile){
-        flex-flow: column wrap;
-        }        
+        overflow: hidden; 
 
         &-img{
-          width: 350px;
-          height: 500px;
+          width: 300px;
+          height: 300px;
+          border-radius: 100%;
         }
 
         &-text{
+          margin:16px 50px 0 50px;
+          border:1px solid red;
           display: flex;
-          flex-flow: column wrap;
+          flex-flow: column nowrap;
           align-items: center;
+          @media (--desktop){
+            margin-top:16px;  
+          }
+          @media (--tablet){
+
+          }
         }
 
       }
@@ -161,9 +171,10 @@
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        @media (--mobile){
+        @media (--desktop){
           flex-flow: column wrap;
         }
+
         &-titleContent{
           margin-top: 20px;
           color: var(--bg-header);
@@ -189,6 +200,7 @@
           align-items: center;
           @media (--desktop){
             flex-flow:column;
+            width:600px;
           }
         }
       }
@@ -246,24 +258,26 @@
     &-Works{
       background:var(--fontWhiteColor);
       color:var(--fontBlogColor);
+      display: flex;
+      align-content:center;
     }
     
     &-div{     
       display: flex;
       flex-flow: column wrap;
-      align-items: center;
-
-      @media (--mobile){
-        width: auto;
-      }     
+      align-items: center;    
 
       &-title{
         font-size: responsive 25px 36px;
       }
+
       &-content{
         font-size: responsive 16px 22px;
         text-align: center;
         height: 200px;
+        @media (--desktop){
+          height: 110px;
+        }
       }
     }
 
