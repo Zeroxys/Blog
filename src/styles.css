@@ -100,9 +100,14 @@
   }
   
   .HospesBlogs{
+    border:1px solid red;
     background: var(--bg-header);
     color: var(--fontWhiteColor);
     height: 400px;
+    padding-bottom: 40px;
+    @media (--mobile){
+      height: auto;
+    }
     &-contents{
       display: flex;
       flex-flow: column nowrap;
@@ -306,42 +311,48 @@
   .HospesFoot{
     background-color: var(--bg-header);
     color: var(--fontWhiteColor);
-    height: 180px;
+    height: 220px;
     display: flex;
-    flex-flow:row wrap;
+    flex-flow:row nowrap;
     justify-content: space-between;
     align-items: center;
+
+    @media (--icons){
+      flex-flow: column nowrap;
+    }
     
     &-copyright{ 
-      padding-right: 35px;
+      padding:0 35px 0 0; 
       display: flex;
       flex-flow: column nowrap;
       border-right: 1px solid white;
-      font-size: responsive 12px 16px;
-      @media (--icons){
-        padding-right: 20px; 
+      font-size: responsive 12px 16px;          
+      
+      @media (width <= 500px){
+       border: none;
+       padding: 0;
+       text-align: center; 
       }
+
     }
 
     &-icons{
-      width: 200px;
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: row wrap;
       justify-content: space-around;
-      @media (--icons){
-        flex-flow: column nowrap;
-        width: 15px;
-      }
+
       &-icon{
         width: 35px;
+        margin:5px;
+                
         &-color{
           fill:#d5d5d5;
         }
+
         &-color:hover{
           fill:red;
         }
       }
-    }
-
+    }  
   }
 }
