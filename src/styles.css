@@ -17,9 +17,9 @@
 /*--Mixins--*/
 @define-mixin btn $color, $borderColor{
   text-align: center;
-  width: 150px;
+  width: 120px;
   margin: 25px;
-  padding: 15px;
+  padding: 5px;
   color: $color;
   border: 2px solid $color;
   border-radius: 6px;
@@ -100,7 +100,6 @@
   }
   
   .HospesBlogs{
-    border:1px solid red;
     background: var(--bg-header);
     color: var(--fontWhiteColor);
     height: 400px;
@@ -127,14 +126,13 @@
     flex-flow: row nowrap;
     justify-content: space-between;
 
-    @media (--desktop){
+    @media (--mobile){
     flex-flow: row wrap;
     }
 
     &-About{
       background:var(--fontWhiteColor);
       color:var(--fontBlogColor);
-
       &-content{
         border: 1px solid red;
         height: 1050px;
@@ -176,7 +174,7 @@
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        @media (--desktop){
+        @media (--mobile){
           flex-flow: column wrap;
         }
 
@@ -203,7 +201,7 @@
           flex-flow: row wrap;
           justify-content: space-between;
           align-items: center;
-          @media (--desktop){
+          @media (--mobile){
             flex-flow:column;
             width:600px;
           }
@@ -267,27 +265,30 @@
       align-content:center;
     }
     
-    &-div{     
+    &-div{
       display: flex;
-      flex-flow: column wrap;
-      align-items: center;    
+      flex-flow: column nowrap;
+      align-items: center;  
+      width: 100%;
 
       &-title{
         font-size: responsive 25px 36px;
       }
 
       &-content{
+        padding: 25px;
         font-size: responsive 16px 22px;
         text-align: center;
         height: 200px;
-        @media (--desktop){
-          height: 110px;
-        }
+        
+        @media (--mobile){
+          height: 175px;
+        }        
       }
+
     }
 
     &-button{
-
       @mixin btn var(--fontBlogColor);
       &-b{
         @mixin btn var(--fontWhiteColor);
