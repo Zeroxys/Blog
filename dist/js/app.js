@@ -2547,10 +2547,38 @@ require('./templates/about');
 require('./templates/blog');
 require('./templates/works');
 require('./templates/blogContent');
+require('./templates/404');
 
 page.start();
 
-},{"./templates/about":18,"./templates/blog":24,"./templates/blogContent":20,"./templates/root":27,"./templates/works":29,"page":12}],18:[function(require,module,exports){
+},{"./templates/404":18,"./templates/about":20,"./templates/blog":26,"./templates/blogContent":22,"./templates/root":29,"./templates/works":31,"page":12}],18:[function(require,module,exports){
+'use strict';
+
+var page = require('page');
+var empty = require('empty-element');
+var template = require('./template.js');
+var title = require('title');
+
+page('*', function (ctx, next) {
+  title('404');
+  var body = document.getElementById('body');
+  empty(body).appendChild(template);
+});
+
+},{"./template.js":19,"empty-element":4,"page":12,"title":14}],19:[function(require,module,exports){
+'use strict';
+
+var _templateObject = _taggedTemplateLiteral(['<h1>NOT FOUND 404</h1>'], ['<h1>NOT FOUND 404</h1>']);
+
+function _taggedTemplateLiteral(strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
+
+var yo = require('yo-yo');
+
+module.exports = yo(_templateObject);
+
+},{"yo-yo":15}],20:[function(require,module,exports){
 'use strict';
 
 var page = require('page');
@@ -2564,10 +2592,10 @@ page('/about', function (ctx, next) {
   empty(cont).appendChild(template);
 });
 
-},{"./template.js":19,"empty-element":4,"page":12,"title":14}],19:[function(require,module,exports){
+},{"./template.js":21,"empty-element":4,"page":12,"title":14}],21:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['<section class="HospesContents-About-content u-wrapper">\n\n  <img class="HospesContents-About-content-img" src="img/dev.jpg"/>\n  \n  <div class="HospesContents-About-content-text u-wrapper">\n    <h1 class="HospesContents-About-content-title">Lorem ipsum dolor</h1>\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n     voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n      repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n    </p>\n    <h1>asdsadas</h1>\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n     Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n     officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n     adipisci et quaerat.</p>\n    <h1>asdsadas</h1>\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n     Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n     officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n     adipisci et quaerat.</p>\n    <h1>asdsadas</h1>\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n     Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n     officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n     adipisci et quaerat.</p>\n    <h1>asdsadas</h1>\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n     Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n     officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n     adipisci et quaerat.</p>                   \n  </div>\n\n</section>'], ['<section class="HospesContents-About-content u-wrapper">\n\n  <img class="HospesContents-About-content-img" src="img/dev.jpg"/>\n  \n  <div class="HospesContents-About-content-text u-wrapper">\n    <h1 class="HospesContents-About-content-title">Lorem ipsum dolor</h1>\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n     voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n      repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n    </p>\n    <h1>asdsadas</h1>\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n     Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n     officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n     adipisci et quaerat.</p>\n    <h1>asdsadas</h1>\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n     Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n     officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n     adipisci et quaerat.</p>\n    <h1>asdsadas</h1>\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n     Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n     officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n     adipisci et quaerat.</p>\n    <h1>asdsadas</h1>\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n     Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n     officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n     adipisci et quaerat.</p>                   \n  </div>\n\n</section>']);
+var _templateObject = _taggedTemplateLiteral(['<section class="HospesContents-About-content u-wrapper">\n\n      <img class="HospesContents-About-content-img" src="img/dev.jpg"/>\n      \n      <div class="HospesContents-About-content-text u-wrapper">\n        <h1 class="HospesContents-About-content-title">Lorem ipsum dolor</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n         voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n          repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n        </p>\n        <h1>asdsadas</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n         Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n         officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n         adipisci et quaerat.</p>\n        <h1>asdsadas</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n         Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n         officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n         adipisci et quaerat.</p>\n        <h1>asdsadas</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n         Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n         officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n         adipisci et quaerat.</p>\n        <h1>asdsadas</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n         Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n         officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n         adipisci et quaerat.</p>                   \n      </div>\n\n    </section>'], ['<section class="HospesContents-About-content u-wrapper">\n\n      <img class="HospesContents-About-content-img" src="img/dev.jpg"/>\n      \n      <div class="HospesContents-About-content-text u-wrapper">\n        <h1 class="HospesContents-About-content-title">Lorem ipsum dolor</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n         voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n          repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n        </p>\n        <h1>asdsadas</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n         Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n         officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n         adipisci et quaerat.</p>\n        <h1>asdsadas</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n         Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n         officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n         adipisci et quaerat.</p>\n        <h1>asdsadas</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n         Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n         officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n         adipisci et quaerat.</p>\n        <h1>asdsadas</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n         Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n         officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n         adipisci et quaerat.</p>                   \n      </div>\n\n    </section>']);
 
 function _taggedTemplateLiteral(strings, raw) {
   return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
@@ -2580,30 +2608,34 @@ var box = yo(_templateObject);
 
 module.exports = landing(box);
 
-},{"../landing":25,"yo-yo":15}],20:[function(require,module,exports){
+},{"../landing":27,"yo-yo":15}],22:[function(require,module,exports){
 'use strict';
 
 var page = require('page');
 var empty = require('empty-element');
 var title = require('title');
-var template = require('./template');
+var template = require('./template.js');
 
 page('/content', function (ctx, next) {
   title('Blog-Content');
-
-  var cont = document.getElementById('Contenido');
-
-  cont.appendChild(template);
+  var contenido = document.getElementById('Contenido');
+  empty(contenido).appendChild(template);
 });
 
-},{"./template":21,"empty-element":4,"page":12,"title":14}],21:[function(require,module,exports){
+},{"./template.js":23,"empty-element":4,"page":12,"title":14}],23:[function(require,module,exports){
 'use strict';
+
+var _templateObject = _taggedTemplateLiteral(['<section class="blogsContents">\n  <img src="http://bit.ly/2j3Ho0X" class="blogsContents-img"/>\n  <i class="blogsContents-foo">p</i>\n  <section class="blogsContents-content u-wrapper">\n    <p class="blogsContents-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam aliquam deserunt corporis maxime quae neque, similique, culpa reiciendis odio et amet? Minus aperiam deleniti consectetur sit, a accusantium maiores itaque.</p>\n  </section>\n</section>'], ['<section class="blogsContents">\n  <img src="http://bit.ly/2j3Ho0X" class="blogsContents-img"/>\n  <i class="blogsContents-foo">p</i>\n  <section class="blogsContents-content u-wrapper">\n    <p class="blogsContents-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam aliquam deserunt corporis maxime quae neque, similique, culpa reiciendis odio et amet? Minus aperiam deleniti consectetur sit, a accusantium maiores itaque.</p>\n  </section>\n</section>']);
+
+function _taggedTemplateLiteral(strings, raw) {
+  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
+}
 
 var yo = require('yo-yo');
 
-module.exports = 'yo <h1>Contenido del blog</h1>';
+module.exports = yo(_templateObject);
 
-},{"yo-yo":15}],22:[function(require,module,exports){
+},{"yo-yo":15}],24:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<section>\n  <section class="HospesContents-Blog-Principal">\n          <section class="HospesContents-Blog-Principal-titleContent">\n            <h2 class="HospesContents-Blog-Principal-titleContent-title">Blogs</h2>\n            <p class="HospesContents-Blog-Principal-titleContent-text">Una serie de catastroficas desdichas</p>\n          </section> \n\n          <section class="HospesContents-Blog-Principal-Contenido">\n            ', '\n          </section>                     \n  </section>\n  </section>'], ['<section>\n  <section class="HospesContents-Blog-Principal">\n          <section class="HospesContents-Blog-Principal-titleContent">\n            <h2 class="HospesContents-Blog-Principal-titleContent-title">Blogs</h2>\n            <p class="HospesContents-Blog-Principal-titleContent-text">Una serie de catastroficas desdichas</p>\n          </section> \n\n          <section class="HospesContents-Blog-Principal-Contenido">\n            ', '\n          </section>                     \n  </section>\n  </section>']);
@@ -2618,7 +2650,7 @@ module.exports = function (blogs) {
   return yo(_templateObject, blogs);
 };
 
-},{"yo-yo":15}],23:[function(require,module,exports){
+},{"yo-yo":15}],25:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<section class="HospesContents-Blog-Articulos">\n        <img class="HospesContents-Blog-Articulos-img" src=', '/>\n\n        <section class="HospesContents-Blog-Articulos-content">\n\n          <h1 class="HospesContents-Blog-Articulos-content-title">', '</h1>\n          \n          <p class="HospesContents-Blog-Articulos-content-text" id="text-box">\n            ', '\n          </p>\n\n        </section>\n        <a class="HospesContents-Blog-Articulos-btn" href=', '>Ver mas...</a>\n        \n        <section class="HospesContents-Blog-Articulos-content-commentBox">\n          \n          <div>\n            <p>', ' Me gusta</p>\n          </div>\n\n          <div>\n            <p>', ' Comentarios</p>\n          </div>\n\n        </section>\n\n      </section>'], ['<section class="HospesContents-Blog-Articulos">\n        <img class="HospesContents-Blog-Articulos-img" src=', '/>\n\n        <section class="HospesContents-Blog-Articulos-content">\n\n          <h1 class="HospesContents-Blog-Articulos-content-title">', '</h1>\n          \n          <p class="HospesContents-Blog-Articulos-content-text" id="text-box">\n            ', '\n          </p>\n\n        </section>\n        <a class="HospesContents-Blog-Articulos-btn" href=', '>Ver mas...</a>\n        \n        <section class="HospesContents-Blog-Articulos-content-commentBox">\n          \n          <div>\n            <p>', ' Me gusta</p>\n          </div>\n\n          <div>\n            <p>', ' Comentarios</p>\n          </div>\n\n        </section>\n\n      </section>']);
@@ -2634,7 +2666,7 @@ module.exports = function template(blog) {
         return yo(_templateObject, blog.imageUrl, blog.name, blog.previewBlog, blog.urlBlog, blog.likes, blog.comments);
 };
 
-},{"yo-yo":15}],24:[function(require,module,exports){
+},{"yo-yo":15}],26:[function(require,module,exports){
 'use strict';
 
 var page = require('page');
@@ -2655,19 +2687,19 @@ page('/blog', function (ctx, next) {
   }, { name: 'title 2',
     imageUrl: 'http://bit.ly/2j3Ho0X',
     previewBlog: 'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
-    urlBlog: '/about',
+    urlBlog: '/content',
     likes: 16,
     comments: 8
   }, { name: 'title 3',
     imageUrl: 'http://bit.ly/2j3Ho0X',
     previewBlog: 'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
-    urlBlog: '/about',
+    urlBlog: '/content',
     likes: 16,
     comments: 8
   }, { name: 'title 4',
     imageUrl: 'http://bit.ly/2j3Ho0X',
     previewBlog: 'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
-    urlBlog: '/about',
+    urlBlog: '/content',
     likes: 16,
     comments: 8
   }];
@@ -2675,10 +2707,10 @@ page('/blog', function (ctx, next) {
   empty(cont).appendChild(template(blogs));
 });
 
-},{"../renderBlogs":26,"empty-element":4,"page":12,"title":14}],25:[function(require,module,exports){
+},{"../renderBlogs":28,"empty-element":4,"page":12,"title":14}],27:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['<section id="Contenido">\n      ', '\n    </section>'], ['<section id="Contenido">\n      ', '\n    </section>']);
+var _templateObject = _taggedTemplateLiteral(['<section>\n      ', '\n    </section>'], ['<section>\n      ', '\n    </section>']);
 
 function _taggedTemplateLiteral(strings, raw) {
   return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
@@ -2690,7 +2722,7 @@ module.exports = function landing(block) {
   return yo(_templateObject, block);
 };
 
-},{"yo-yo":15}],26:[function(require,module,exports){
+},{"yo-yo":15}],28:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['', ''], ['', '']);
@@ -2711,7 +2743,7 @@ module.exports = function renderBlogs(blogs) {
   return layout(el);
 };
 
-},{"../blogLayout":22,"../blogTemplates":23,"yo-yo":15}],27:[function(require,module,exports){
+},{"../blogLayout":24,"../blogTemplates":25,"yo-yo":15}],29:[function(require,module,exports){
 'use strict';
 
 var page = require('page');
@@ -2726,7 +2758,7 @@ page('/', function (ctx, next) {
   empty(contenido).appendChild(template);
 });
 
-},{"./template":28,"empty-element":4,"page":12,"title":14}],28:[function(require,module,exports){
+},{"./template":30,"empty-element":4,"page":12,"title":14}],30:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<section class="landing">\n\n      <section class="HospesPort" id="Portada">  \n        <div class="HospesPort-img">\n          \n        </div>\n      </section>\n\n\n      <section class="HospesBlogs u-wrapper" id="Bienvenida">\n        <section class="HospesBlogs-contents">\n          <h2 class="HospesBlogs-contents-title">Bienvenido</h2>\n          <p class="HospesBlogs-contents-content">He decidido abrir este sitio con la unica intencion de compartir todo aquello que para mi es interesante, ya sea sobre desarrollo web,historias de vida, javascript \u2764.\n          <br>\n          <br> \n          En cualquier caso si estas aqui es porque probablemente algun articulo te llamo la atencion, te invito a que sigas mis blogs y juntos podamos seguir aprendiendo un poco mas sobre la web.</p>\n        </section>\n      </section>\n\n      <section class="HospesContents"  id="HospesCont">\n\n        <section class="HospesContents-About">\n          <div class="HospesContents-div">\n            <h2 class="HospesContents-div-title">About</h2>\n            <img src="img/AboutSvg.svg">\n            <p class="HospesContents-div-content">Quieres saber un poco mas de mi vida ? cosas a las que dedico mis tiempos libres? Te invito a cotillear un poco mas Sobre Mi</p>\n            <a class="HospesContents-button" href="/about">Ver Mas..</a>        \n          </div>\n        </section>\n\n        <section class="HospesContents-Blog ">\n          <div class="HospesContents-div">\n            <h2 class="HospesContents-div-title">Blog</h2>\n            <img src="img/blogSvg.svg">\n            <p class="HospesContents-div-content">Una serie de catastroficas desdichas convertidas en Blogs, Aqui podras encontrar uno que otro tutorial que espero te sea de utilidad. No olvides compartirlas ;)</p>\n            <a class="HospesContents-button-b" href="/blog">Ver Mas..</a>\n          </div>        \n        </section>\n\n        <section class="HospesContents-Works ">\n          <div class="HospesContents-div">\n            <h2 class="HospesContents-div-title">Works</h2>\n            <img src="img/WorkSvg.svg">          \n            <p class="HospesContents-div-content">Empresas en las que he trabajado ?  Pff, Mejor te muestro un poco sobre los proyectos que he desarrollado. Lo se, no son muchos pero por algo se empieza ;)</p>\n            <a class="HospesContents-button" href="/works">Ver Mas..</a>\n          </div>        \n        </section>\n\n      </section>\n\n</section>'], ['<section class="landing">\n\n      <section class="HospesPort" id="Portada">  \n        <div class="HospesPort-img">\n          \n        </div>\n      </section>\n\n\n      <section class="HospesBlogs u-wrapper" id="Bienvenida">\n        <section class="HospesBlogs-contents">\n          <h2 class="HospesBlogs-contents-title">Bienvenido</h2>\n          <p class="HospesBlogs-contents-content">He decidido abrir este sitio con la unica intencion de compartir todo aquello que para mi es interesante, ya sea sobre desarrollo web,historias de vida, javascript \u2764.\n          <br>\n          <br> \n          En cualquier caso si estas aqui es porque probablemente algun articulo te llamo la atencion, te invito a que sigas mis blogs y juntos podamos seguir aprendiendo un poco mas sobre la web.</p>\n        </section>\n      </section>\n\n      <section class="HospesContents"  id="HospesCont">\n\n        <section class="HospesContents-About">\n          <div class="HospesContents-div">\n            <h2 class="HospesContents-div-title">About</h2>\n            <img src="img/AboutSvg.svg">\n            <p class="HospesContents-div-content">Quieres saber un poco mas de mi vida ? cosas a las que dedico mis tiempos libres? Te invito a cotillear un poco mas Sobre Mi</p>\n            <a class="HospesContents-button" href="/about">Ver Mas..</a>        \n          </div>\n        </section>\n\n        <section class="HospesContents-Blog ">\n          <div class="HospesContents-div">\n            <h2 class="HospesContents-div-title">Blog</h2>\n            <img src="img/blogSvg.svg">\n            <p class="HospesContents-div-content">Una serie de catastroficas desdichas convertidas en Blogs, Aqui podras encontrar uno que otro tutorial que espero te sea de utilidad. No olvides compartirlas ;)</p>\n            <a class="HospesContents-button-b" href="/blog">Ver Mas..</a>\n          </div>        \n        </section>\n\n        <section class="HospesContents-Works ">\n          <div class="HospesContents-div">\n            <h2 class="HospesContents-div-title">Works</h2>\n            <img src="img/WorkSvg.svg">          \n            <p class="HospesContents-div-content">Empresas en las que he trabajado ?  Pff, Mejor te muestro un poco sobre los proyectos que he desarrollado. Lo se, no son muchos pero por algo se empieza ;)</p>\n            <a class="HospesContents-button" href="/works">Ver Mas..</a>\n          </div>        \n        </section>\n\n      </section>\n\n</section>']);
@@ -2739,7 +2771,7 @@ var yo = require('yo-yo');
 
 module.exports = yo(_templateObject);
 
-},{"yo-yo":15}],29:[function(require,module,exports){
+},{"yo-yo":15}],31:[function(require,module,exports){
 'use strict';
 
 var page = require('page');
@@ -2753,7 +2785,7 @@ page('/works', function (ctx, next) {
   empty(cont).appendChild(template);
 });
 
-},{"./template.js":30,"empty-element":4,"page":12,"title":14}],30:[function(require,module,exports){
+},{"./template.js":32,"empty-element":4,"page":12,"title":14}],32:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<section>\n  <h1>Aqui ira la seccion de works funcion</h1>\n  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n  </p>\n\n  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n  </p>\n\n  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n  </p>\n\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n  </p>\n\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n  </p>\n\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n  </p>  \n  <a href="/">Volver</a>\n</section>'], ['<section>\n  <h1>Aqui ira la seccion de works funcion</h1>\n  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n  </p>\n\n  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n  </p>\n\n  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n  </p>\n\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n  </p>\n\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n  </p>\n\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n   voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n    repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n\n    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nulla suscipit unde\n    rerum mollitia dolorum. Nostrum quos voluptas pariatur neque quasi amet assumenda, quo\n    beatae natus omnis officiis, eaque repellendus.\n  </p>  \n  <a href="/">Volver</a>\n</section>']);
@@ -2769,4 +2801,4 @@ var block = yo(_templateObject);
 
 module.exports = landing(block);
 
-},{"../landing":25,"yo-yo":15}]},{},[17]);
+},{"../landing":27,"yo-yo":15}]},{},[17]);

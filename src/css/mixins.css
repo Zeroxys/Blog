@@ -1,0 +1,12 @@
+/*--Mixins--*/
+@define-mixin btn $color, $borderColor{
+  text-align: center;
+  width: 120px;
+  margin: 25px;
+  padding: 5px;
+  color: $color;
+  border: 2px solid $color;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: responsive 16px 22px;
+}

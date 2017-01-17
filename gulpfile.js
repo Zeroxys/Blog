@@ -15,11 +15,14 @@ const browserify = require('browserify')//Modularizamos y hacemos bundle final
 const rename = require('gulp-rename') // Renonbramos archivos pasados a gulp
 const source = require('vinyl-source-stream') // Las tareas realizadas con browserify las podemos volver a tomar con gulp
 const watchify = require('watchify')//Queda esperando cambios en los ficheros
-const es2015 = require('babel-preset-es2015')
+const es2015 = require('babel-preset-es2015')//pluggin de ecma6 para babel
+const fontAwesome = require('postcss-font-awesome');//plugin de fontawesome para postcss
+const atImport = require('postcss-import');//nos permite importar modules en nuestro postcss
 
 //servidor de desarrollo
 gulp.task('serve', function (){
   browserSync.init({
+    open:false,
     server:{
       baseDir:'./dist'
     }
@@ -30,18 +33,20 @@ gulp.task('serve', function (){
 gulp.task('css', function(){
   
   var processors = [
+    atImport(),
     mixins(),
     nested,
+    fontAwesome,
     rucksack(),
     cssnext({browsers:['>5%', 'ie >= 8']}),
     mqpacker,
     csswring()
   ]
 
-  gulp.src('./src/*.css')
+  gulp.src('./src/css/styles.css')
     .pipe(postcss(processors))
     .pipe(gulp.dest('./dist/css'))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream())  
 })
 
 //Tarea coloca imagenes de src a dist
@@ -92,7 +97,7 @@ gulp.task('watch', function(){
 gulp.task('watchFiles', function(){
   gulp.watch('./src/assets/img', ['img']);
   gulp.watch('./dist/*.html',['watch']);
-  gulp.watch('./src/*.css', ['css']);
+  gulp.watch('./src/css/*.css', ['css']);
 })
 
 //Tareas por defecto

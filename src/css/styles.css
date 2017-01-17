@@ -1,31 +1,7 @@
-:root{
-  --bg-body:#d5d5d5;
-  --bg-header:#373737;
-  --fontBlogColor:#404b4d;
-  --fontWhiteColor:#d5d5d5;
-
-  --fontSize:1em;
-}
-
-/* -- Definiendo customs media queries --*/
-@custom-media --mobile (max-width: 767px);
-@custom-media --tablet (max-width: 650px);
-@custom-media --desktop (max-width: 970px);
-@custom-media --icons (max-width: 500px);
-@custom-media --retina (-webkit-min-device-pixel-ratio:2);
-
-/*--Mixins--*/
-@define-mixin btn $color, $borderColor{
-  text-align: center;
-  width: 120px;
-  margin: 25px;
-  padding: 5px;
-  color: $color;
-  border: 2px solid $color;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: responsive 16px 22px;
-}
+/*--Importacion de ficheros--*/
+@import "./variables.css";
+@import "./media.css";
+@import "./mixins.css";
 
 
 .HospesBody{
@@ -133,34 +109,35 @@
     &-About{
       background:var(--fontWhiteColor);
       color:var(--fontBlogColor);
-      &-content{
-        border: 1px solid red;
-        height: 1050px;
-        margin:36px 0 36px 0;  
+
+      &-content{ 
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-between;
-        align-items: center;
-        overflow: hidden; 
+        align-items: center; 
 
         &-img{
-          width: 300px;
-          height: 300px;
+          margin: 35px 35px;  
+          width: 250px;
+          height: 250px;
           border-radius: 100%;
         }
 
         &-text{
-          margin:16px 50px 0 50px;
-          border:1px solid red;
+          width: 900px;
+          margin-bottom:150px;
           display: flex;
           flex-flow: column nowrap;
           align-items: center;
+          
           @media (--desktop){
-            margin-top:16px;  
+            width: 500px;
           }
-          @media (--tablet){
 
-          }
+          @media (--icons){
+            width: 189px;
+          }          
+
         }
 
       }
@@ -174,6 +151,7 @@
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
+
         @media (--mobile){
           flex-flow: column wrap;
         }
@@ -195,16 +173,23 @@
         }
 
         &-Contenido{
-          margin:20px;
           width: 1100px;
+          margin:20px;
           display: flex;
           flex-flow: row wrap;
           justify-content: space-between;
           align-items: center;
-          @media (--mobile){
+        
+          @media (--desktop){
             flex-flow:column;
             width:600px;
           }
+
+          @media (--icons){
+            flex-flow:column;
+            width:380px;
+          }     
+
         }
       }
 
@@ -219,9 +204,27 @@
         height: 750px;
         border-radius: 5px;
 
+        
+        @media (--mobile){
+          background: var(--bg-header);
+          display: flex;
+          flex-flow: column wrap;
+          align-items: center;
+          margin-bottom: 50px; 
+          width: 380px;
+          height: 750px;
+          border-radius: 5px;          
+        }
+        
         &-img{
           height: 270px;
           width: 450px;
+          
+          @media (--mobile){
+            height: 270px;
+            width: 380px;
+          }
+
         }
 
         &-content{ 
@@ -237,6 +240,10 @@
             height: 210px;
             font-size:responsive 12px 15px;
             overflow : hidden;
+            @media (--mobile){
+              width: 300px;
+            }
+
           }
           &-commentBox{
             width: 400px;
@@ -244,6 +251,10 @@
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
+            
+            @media (--mobile){
+              width: 300px;
+            }
           }
         }
         &-btn{
@@ -307,7 +318,32 @@
     }    
 
   }
+  
+  .blogsContents{
+    &-img{
+      display: block;
+      max-width: 100%;
+    }
 
+    &-foo {
+      display: inline-block;
+      font: normal normal normal FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    &-foo::before {
+      font-family: FontAwesome;
+      content: '\f030';
+    }
+
+    &-content{
+      &-text{
+        border:1px solid red;
+      }
+    }
+  }
 
   .HospesFoot{
     background-color: var(--bg-header);
@@ -330,9 +366,10 @@
       font-size: responsive 12px 16px;          
       
       @media (width <= 500px){
-       border: none;
-       padding: 0;
-       text-align: center; 
+        border-right:none;
+        border-bottom:1px solid white;     
+        padding: 0;
+        text-align: center; 
       }
 
     }

@@ -1,0 +1,6 @@
+/* -- Definiendo customs media queries --*/
+@custom-media --mobile (max-width: 767px);
+@custom-media --tablet (max-width: 650px);
+@custom-media --desktop (max-width: 970px);
+@custom-media --icons (max-width: 500px);
+@custom-media --retina (-webkit-min-device-pixel-ratio:2);

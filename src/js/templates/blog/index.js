@@ -19,7 +19,7 @@ page('/blog', function(ctx,next){
                {name:'title 2',
                 imageUrl:'http://bit.ly/2j3Ho0X',
                 previewBlog:'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
-                urlBlog:'/about',
+                urlBlog:'/content',
                 likes:16,
                 comments:8
                },
@@ -27,7 +27,7 @@ page('/blog', function(ctx,next){
                {name:'title 3',
                 imageUrl:'http://bit.ly/2j3Ho0X',
                 previewBlog:'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
-                urlBlog:'/about',
+                urlBlog:'/content',
                 likes:16,
                 comments:8
                },
@@ -35,7 +35,7 @@ page('/blog', function(ctx,next){
                 {name:'title 4',
                 imageUrl:'http://bit.ly/2j3Ho0X',
                 previewBlog:'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
-                urlBlog:'/about',
+                urlBlog:'/content',
                 likes:16,
                 comments:8
                }];
