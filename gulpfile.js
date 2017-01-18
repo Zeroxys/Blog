@@ -17,7 +17,9 @@ const source = require('vinyl-source-stream') // Las tareas realizadas con brows
 const watchify = require('watchify')//Queda esperando cambios en los ficheros
 const es2015 = require('babel-preset-es2015')//pluggin de ecma6 para babel
 const fontAwesome = require('postcss-font-awesome');//plugin de fontawesome para postcss
-const atImport = require('postcss-import');//nos permite importar modules en nuestro postcss
+//const atImport = require('postcss-import');//nos permite importar modules en nuestro postcss
+const url = require('postcss-url');//plugin para postcss-import
+const atImport = require('postcss-easy-import');
 
 //servidor de desarrollo
 gulp.task('serve', function (){
@@ -34,11 +36,12 @@ gulp.task('css', function(){
   
   var processors = [
     atImport(),
+    url(),
     mixins(),
     nested,
-    fontAwesome,
     rucksack(),
     cssnext({browsers:['>5%', 'ie >= 8']}),
+    fontAwesome(),
     mqpacker,
     csswring()
   ]

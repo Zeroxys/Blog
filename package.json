@@ -26,9 +26,11 @@
     "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.2",
     "postcss-cssnext": "^2.9.0",
+    "postcss-easy-import": "^2.0.0",
     "postcss-import": "^9.1.0",
     "postcss-mixins": "^5.4.0",
     "postcss-nested": "^1.0.0",
+    "postcss-url": "^5.1.2",
     "rucksack-css": "^0.9.1",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.8.0"

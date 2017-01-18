@@ -324,20 +324,11 @@
       display: block;
       max-width: 100%;
     }
-
-    &-foo {
-      display: inline-block;
-      font: normal normal normal FontAwesome;
-      font-size: inherit;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
     &-foo::before {
       font-family: FontAwesome;
-      content: '\f030';
+      content: '\f08a';
+      font-size: 35px;
     }
-
     &-content{
       &-text{
         border:1px solid red;
