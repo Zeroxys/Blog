@@ -10,6 +10,15 @@
   </head>
   <body class="HospesBody" id="body">
 
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.8";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     <section class="HospesHead" id="Navigation">
       <header class="HospesHead-header u-wrapper">
         <h1 class="HospesHead-title">{Hospes}</h1>
@@ -24,8 +33,7 @@
     
     <section id="Contenido">
       
-      
-    </section>
+    </section>  
 
       <footer class="HospesFoot u-wrapper" id="Foot">
           

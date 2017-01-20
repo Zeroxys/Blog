@@ -324,14 +324,62 @@
       display: block;
       max-width: 100%;
     }
-    &-foo::before {
-      font-family: FontAwesome;
-      content: '\f08a';
-      font-size: 35px;
-    }
-    &-content{
+    
+    &-textContent{
+      display: flex;
+      flex-flow: column nowrap;
+      align-items:center;
+      &-title{
+        font-size: responsive 32px 40px;
+      }
       &-text{
-        border:1px solid red;
+        padding: 0 75px 0 75px;
+        @media (--icons){
+          padding: 0 15px 25px 15px;
+        }
+      }
+    }
+
+    &-icons{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding: 0 55px 0 55px;
+
+      @media (--icons){
+        padding: 0 25px 0 25px;
+      }
+
+      &-heart{
+        text-decoration: none;
+        color: black;
+      }      
+
+      &-heart::before {
+        font-family: FontAwesome;
+        content: '\f08a';
+        font-size: responsive 20px 35px;
+      }
+      
+      &-share{
+        color: black;
+        text-decoration: none;
+      }
+
+      &-share::before {
+        font-family: FontAwesome;
+        content: '\f079';
+        font-size: responsive 16px 35px;
+      }      
+    }
+
+    &-boxComments{
+      background-color: #A5A5AF;
+      &-fbComments{
+        padding: 0 100px 0 100px;
+        @media (--icons){
+          padding: 0;
+        }
       }
     }
   }
@@ -382,6 +430,6 @@
           fill:red;
         }
       }
-    }  
+    }
   }
 }
