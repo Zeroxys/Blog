@@ -52,7 +52,7 @@
           transition-timing-function: ease-in-out;
         }
         &-link:hover{
-          border-top: 2px solid red;
+          border-bottom: 1px solid red;
           color: red;
         }
       }
@@ -333,9 +333,12 @@
         font-size: responsive 32px 40px;
       }
       &-text{
-        padding: 0 75px 0 75px;
+        padding: 0 170px 0 170px;
+        @media (--desktop){
+          padding: 0 100px 25px 100px;
+        }
         @media (--icons){
-          padding: 0 15px 25px 15px;
+          padding: 0 15px 25px 15px; 
         }
       }
     }
@@ -344,10 +347,13 @@
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between;
-      padding: 0 55px 0 55px;
+      padding: 50px 170px 15px 170px;
 
+      @media (--desktop){
+        padding: 0 100px 25px 100px;
+      }
       @media (--icons){
-        padding: 0 25px 0 25px;
+        padding: 0 15px 25px 15px; 
       }
 
       &-heart{
@@ -376,10 +382,16 @@
     &-boxComments{
       background-color: #A5A5AF;
       &-fbComments{
-        padding: 0 100px 0 100px;
-        @media (--icons){
-          padding: 0;
+        padding: 0 170px 0 170px;
+
+        @media (--desktop){
+          padding: 0 100px 25px 100px; 
         }
+
+        @media (--icons){
+          padding: 0 15px 25px 15px; 
+        } 
+
       }
     }
   }
