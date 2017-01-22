@@ -29,6 +29,10 @@ app.get('/content', (req,res) => {
   res.status(200).sendfile('./dist/index.html');
 });
 
+app.get('/primer-blog', (req,res) => {
+  res.status(200).sendfile('./dist/index.html');
+});
+
 app.get('/works', (req,res) => {
   res.status(200).sendfile('./dist/index.html');
 });

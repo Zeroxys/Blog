@@ -2551,7 +2551,7 @@ require('./templates/404');
 
 page.start();
 
-},{"./templates/404":18,"./templates/about":20,"./templates/blog":26,"./templates/blogContent":22,"./templates/root":29,"./templates/works":31,"page":12}],18:[function(require,module,exports){
+},{"./templates/404":18,"./templates/about":20,"./templates/blog":26,"./templates/blogContent":23,"./templates/root":29,"./templates/works":31,"page":12}],18:[function(require,module,exports){
 'use strict';
 
 var page = require('page');
@@ -2611,21 +2611,7 @@ module.exports = landing(box);
 },{"../landing":27,"yo-yo":15}],22:[function(require,module,exports){
 'use strict';
 
-var page = require('page');
-var empty = require('empty-element');
-var title = require('title');
-var template = require('./template.js');
-
-page('/content', function (ctx, next) {
-  title('Blog-Content');
-  var contenido = document.getElementById('Contenido');
-  empty(contenido).appendChild(template);
-});
-
-},{"./template.js":23,"empty-element":4,"page":12,"title":14}],23:[function(require,module,exports){
-'use strict';
-
-var _templateObject = _taggedTemplateLiteral(['<section class="blogsContents">\n    <img src="http://bit.ly/2j3Ho0X" class="blogsContents-img"/>\n\n    <section class="blogsContents-textContent u-wrapper">\n      <h2 class="blogsContents-textContent-title">Title</h2>\n      <p class="blogsContents-textContent-text">\n      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque est aliquid laboriosam tempore quidem, nesciunt at architecto vitae quisquam voluptate quia voluptas harum et ratione! Accusamus, ipsa sapiente veritatis! Numquam.\n      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam aliquam deserunt corporis maxime quae neque, similique, culpa reiciendis odio et amet? Minus aperiam deleniti consectetur sit, a accusantium maiores itaque.</p>        \n    </section>\n\n    <section class="blogsContents-icons u-wrapper">\n      <a  href="#" class="blogsContents-icons-heart"></a>\n      <a href="#" class="blogsContents-icons-share"></a>\n    </section>\n\n    <section class="blogsContents-boxComments">\n      <section class="blogsContents-boxComments-fbComments u-wrapper">\n        <div class="fb-comments" data-href="http://localhost:8080/content" data-width="100%" data-numposts="3"></div>\n      </section>\n    </section>  \n  </section>'], ['<section class="blogsContents">\n    <img src="http://bit.ly/2j3Ho0X" class="blogsContents-img"/>\n\n    <section class="blogsContents-textContent u-wrapper">\n      <h2 class="blogsContents-textContent-title">Title</h2>\n      <p class="blogsContents-textContent-text">\n      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque est aliquid laboriosam tempore quidem, nesciunt at architecto vitae quisquam voluptate quia voluptas harum et ratione! Accusamus, ipsa sapiente veritatis! Numquam.\n      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam aliquam deserunt corporis maxime quae neque, similique, culpa reiciendis odio et amet? Minus aperiam deleniti consectetur sit, a accusantium maiores itaque.</p>        \n    </section>\n\n    <section class="blogsContents-icons u-wrapper">\n      <a  href="#" class="blogsContents-icons-heart"></a>\n      <a href="#" class="blogsContents-icons-share"></a>\n    </section>\n\n    <section class="blogsContents-boxComments">\n      <section class="blogsContents-boxComments-fbComments u-wrapper">\n        <div class="fb-comments" data-href="http://localhost:8080/content" data-width="100%" data-numposts="3"></div>\n      </section>\n    </section>  \n  </section>']);
+var _templateObject = _taggedTemplateLiteral(['<section class="blogsContents">\n    <img src="http://bit.ly/2j3Ho0X" class="blogsContents-img"/>\n\n    <section class="blogsContents-textContent u-wrapper">\n      <h2 class="blogsContents-textContent-title">title</h2>\n      <p class="blogsContents-textContent-text">\n      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque est aliquid laboriosam tempore quidem, nesciunt at architecto vitae quisquam voluptate quia voluptas harum et ratione! Accusamus, ipsa sapiente veritatis! Numquam.\n      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam aliquam deserunt corporis maxime quae neque, similique, culpa reiciendis odio et amet? Minus aperiam deleniti consectetur sit, a accusantium maiores itaque.</p>\n    </section>\n\n    <section class="blogsContents-icons u-wrapper">\n      <a  href="#" class="blogsContents-icons-heart"></a>\n      <a href="#" class="blogsContents-icons-share"></a>\n    </section>\n\n    <section class="blogsContents-boxComments">\n      <section class="blogsContents-boxComments-fbComments u-wrapper">\n        <div class="fb-comments" data-href="http://localhost:8080/content" data-width="100%" data-numposts="3"></div>\n      </section>\n    </section>\n  </section>'], ['<section class="blogsContents">\n    <img src="http://bit.ly/2j3Ho0X" class="blogsContents-img"/>\n\n    <section class="blogsContents-textContent u-wrapper">\n      <h2 class="blogsContents-textContent-title">title</h2>\n      <p class="blogsContents-textContent-text">\n      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque est aliquid laboriosam tempore quidem, nesciunt at architecto vitae quisquam voluptate quia voluptas harum et ratione! Accusamus, ipsa sapiente veritatis! Numquam.\n      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam aliquam deserunt corporis maxime quae neque, similique, culpa reiciendis odio et amet? Minus aperiam deleniti consectetur sit, a accusantium maiores itaque.</p>\n    </section>\n\n    <section class="blogsContents-icons u-wrapper">\n      <a  href="#" class="blogsContents-icons-heart"></a>\n      <a href="#" class="blogsContents-icons-share"></a>\n    </section>\n\n    <section class="blogsContents-boxComments">\n      <section class="blogsContents-boxComments-fbComments u-wrapper">\n        <div class="fb-comments" data-href="http://localhost:8080/content" data-width="100%" data-numposts="3"></div>\n      </section>\n    </section>\n  </section>']);
 
 function _taggedTemplateLiteral(strings, raw) {
   return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
@@ -2635,7 +2621,21 @@ var yo = require('yo-yo');
 
 module.exports = yo(_templateObject);
 
-},{"yo-yo":15}],24:[function(require,module,exports){
+},{"yo-yo":15}],23:[function(require,module,exports){
+'use strict';
+
+var page = require('page');
+var empty = require('empty-element');
+var title = require('title');
+var template = require('./content/template.js');
+
+page('/primer-blog', function (ctx, next) {
+  title('blog.name');
+  var contenido = document.getElementById('Contenido');
+  empty(contenido).appendChild(template);
+});
+
+},{"./content/template.js":22,"empty-element":4,"page":12,"title":14}],24:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<section>\n  <section class="HospesContents-Blog-Principal">\n          <section class="HospesContents-Blog-Principal-titleContent">\n            <h2 class="HospesContents-Blog-Principal-titleContent-title">Blogs</h2>\n            <p class="HospesContents-Blog-Principal-titleContent-text">Una serie de catastroficas desdichas</p>\n          </section> \n\n          <section class="HospesContents-Blog-Principal-Contenido">\n            ', '\n          </section>                     \n  </section>\n  </section>'], ['<section>\n  <section class="HospesContents-Blog-Principal">\n          <section class="HospesContents-Blog-Principal-titleContent">\n            <h2 class="HospesContents-Blog-Principal-titleContent-title">Blogs</h2>\n            <p class="HospesContents-Blog-Principal-titleContent-text">Una serie de catastroficas desdichas</p>\n          </section> \n\n          <section class="HospesContents-Blog-Principal-Contenido">\n            ', '\n          </section>                     \n  </section>\n  </section>']);
@@ -2653,7 +2653,7 @@ module.exports = function (blogs) {
 },{"yo-yo":15}],25:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['<section class="HospesContents-Blog-Articulos">\n        <img class="HospesContents-Blog-Articulos-img" src=', '/>\n\n        <section class="HospesContents-Blog-Articulos-content">\n\n          <h1 class="HospesContents-Blog-Articulos-content-title">', '</h1>\n          \n          <p class="HospesContents-Blog-Articulos-content-text" id="text-box">\n            ', '\n          </p>\n\n        </section>\n        <a class="HospesContents-Blog-Articulos-btn" href=', '>Ver mas...</a>\n        \n        <section class="HospesContents-Blog-Articulos-content-commentBox">\n          \n          <div>\n            <p>', ' Me gusta</p>\n          </div>\n\n          <div>\n            <p>', ' Comentarios</p>\n          </div>\n\n        </section>\n\n      </section>'], ['<section class="HospesContents-Blog-Articulos">\n        <img class="HospesContents-Blog-Articulos-img" src=', '/>\n\n        <section class="HospesContents-Blog-Articulos-content">\n\n          <h1 class="HospesContents-Blog-Articulos-content-title">', '</h1>\n          \n          <p class="HospesContents-Blog-Articulos-content-text" id="text-box">\n            ', '\n          </p>\n\n        </section>\n        <a class="HospesContents-Blog-Articulos-btn" href=', '>Ver mas...</a>\n        \n        <section class="HospesContents-Blog-Articulos-content-commentBox">\n          \n          <div>\n            <p>', ' Me gusta</p>\n          </div>\n\n          <div>\n            <p>', ' Comentarios</p>\n          </div>\n\n        </section>\n\n      </section>']);
+var _templateObject = _taggedTemplateLiteral(['<section class="HospesContents-Blog-Articulos">\n        <img class="HospesContents-Blog-Articulos-img" src=', '/>\n\n        <section class="HospesContents-Blog-Articulos-content">\n\n          <h1 class="HospesContents-Blog-Articulos-content-title">', '</h1>\n\n          <p class="HospesContents-Blog-Articulos-content-text" id="text-box">\n            ', '\n          </p>\n\n        </section>\n        <a class="HospesContents-Blog-Articulos-btn" href=', '>Ver mas...</a>\n\n        <section class="HospesContents-Blog-Articulos-content-commentBox">\n\n          <div>\n            <p>', ' Me gusta</p>\n          </div>\n\n          <div>\n            <p>', ' Comentarios</p>\n          </div>\n\n        </section>\n\n      </section>'], ['<section class="HospesContents-Blog-Articulos">\n        <img class="HospesContents-Blog-Articulos-img" src=', '/>\n\n        <section class="HospesContents-Blog-Articulos-content">\n\n          <h1 class="HospesContents-Blog-Articulos-content-title">', '</h1>\n\n          <p class="HospesContents-Blog-Articulos-content-text" id="text-box">\n            ', '\n          </p>\n\n        </section>\n        <a class="HospesContents-Blog-Articulos-btn" href=', '>Ver mas...</a>\n\n        <section class="HospesContents-Blog-Articulos-content-commentBox">\n\n          <div>\n            <p>', ' Me gusta</p>\n          </div>\n\n          <div>\n            <p>', ' Comentarios</p>\n          </div>\n\n        </section>\n\n      </section>']);
 
 function _taggedTemplateLiteral(strings, raw) {
         return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
@@ -2663,7 +2663,7 @@ function _taggedTemplateLiteral(strings, raw) {
 var yo = require('yo-yo');
 
 module.exports = function template(blog) {
-        return yo(_templateObject, blog.imageUrl, blog.name, blog.previewBlog, blog.urlBlog, blog.likes, blog.comments);
+        return yo(_templateObject, blog.blog.imageUrl, blog.blog.title, blog.blog.previewBlog, blog.urlBlog, blog.likes, blog.comments);
 };
 
 },{"yo-yo":15}],26:[function(require,module,exports){
@@ -2678,29 +2678,23 @@ page('/blog', function (ctx, next) {
   title('Blog-about');
   var cont = document.getElementById('Contenido');
 
-  var blogs = [{ name: 'title',
-    imageUrl: 'http://bit.ly/2j3Ho0X',
-    previewBlog: 'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
-    urlBlog: '/content',
+  var blogs = [{ blog: {
+      title: 'title',
+      imageUrl: 'http://bit.ly/2j3Ho0X',
+      previewBlog: 'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.'
+    },
+    urlBlog: '/primer-blog',
     likes: 16,
+    liked: true,
     comments: 8
-  }, { name: 'title 2',
-    imageUrl: 'http://bit.ly/2j3Ho0X',
-    previewBlog: 'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
-    urlBlog: '/content',
+  }, { blog: {
+      title: 'title',
+      imageUrl: 'http://bit.ly/2j3Ho0X',
+      previewBlog: 'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.'
+    },
+    urlBlog: '/primer-blog',
     likes: 16,
-    comments: 8
-  }, { name: 'title 3',
-    imageUrl: 'http://bit.ly/2j3Ho0X',
-    previewBlog: 'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
-    urlBlog: '/content',
-    likes: 16,
-    comments: 8
-  }, { name: 'title 4',
-    imageUrl: 'http://bit.ly/2j3Ho0X',
-    previewBlog: 'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
-    urlBlog: '/content',
-    likes: 16,
+    liked: true,
     comments: 8
   }];
 
