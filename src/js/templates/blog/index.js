@@ -2,34 +2,37 @@ const page = require('page');
 const empty = require('empty-element');
 const title = require('title');
 const template = require('../renderBlogs');
+//var request = require('superagent');
+var axios = require('axios');
 
-page('/blog', function(ctx,next){
+page('/blog', loadBlogsAxios, function(ctx,next){
   title('Blog-about');
   var cont = document.getElementById('Contenido');
 
-  var blogs = [{blog:{
-                  title:'title',
-                  imageUrl:'http://bit.ly/2j3Ho0X',
-                  previewBlog:'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
-                },
-                urlBlog:'/primer-blog',
-                likes:16,
-                liked:true,
-                comments:8
-               },
-
-               {blog:{
-                  title:'title',
-                  imageUrl:'http://bit.ly/2j3Ho0X',
-                  previewBlog:'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
-                },
-                urlBlog:'/primer-blog',
-                likes:16,
-                liked:true,
-                comments:8
-               }];
-
-  empty(cont).appendChild(template(blogs));
+  empty(cont).appendChild(template(ctx.blogs));
 });
 
-  
+//peticion con superagent (callbacks)
+/*function loadBlogs(ctx,next){
+  request
+    .get('/api/blogs')
+    .end(function (err,res){
+      if (err) return console.log(`Se encontro el siguient error : ${err}`);
+
+      ctx.blogs = res.body;
+      next();
+    })
+}*/
+
+
+//peticion con AXIOS usando promises
+function  loadBlogsAxios (ctx,next){
+  axios.get('/api/blogs')
+    .then(function(res){
+      ctx.blogs = res.data;
+      next()
+    })
+    .catch(function (err){
+      console.log(err);
+    })
+}

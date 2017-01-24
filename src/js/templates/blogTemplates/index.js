@@ -7,14 +7,14 @@ return yo`<section class="HospesContents-Blog-Articulos">
 
         <section class="HospesContents-Blog-Articulos-content">
 
-          <h1 class="HospesContents-Blog-Articulos-content-title">${blog.blog.title}</h1>
+          <h2 class="HospesContents-Blog-Articulos-content-title">${blog.blog.title}</h2>
 
           <p class="HospesContents-Blog-Articulos-content-text" id="text-box">
             ${blog.blog.previewBlog}
           </p>
 
         </section>
-        <a class="HospesContents-Blog-Articulos-btn" href=${blog.urlBlog}>Ver mas...</a>
+        <a class="HospesContents-Blog-Articulos-btn" href="${blog.urlBlog}">Ver mas...</a>
 
         <section class="HospesContents-Blog-Articulos-content-commentBox">
 
