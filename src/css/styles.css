@@ -3,7 +3,6 @@
 @import "./media.css";
 @import "./mixins.css";
 
-
 .HospesBody{
   background:var(--fontWhiteColor);
   padding: 0;
@@ -16,6 +15,44 @@
   .u-wrapper{
     padding: 0 2em 0 2em;
   }
+
+  .liked{
+    .heartdislike{
+      display: block;
+      text-decoration:none;
+      color: #f44336;
+    }
+
+    .heartdislike::before{
+      font-family: FontAwesome;
+      content: '\f004';
+      font-size: responsive 20px 35px;
+    }    
+    .heart{
+      display: none;
+      text-decoration: none;
+      color: black;
+    }      
+
+    .heart::before {
+      font-family: FontAwesome;
+      content: '\f08a';
+      font-size: responsive 20px 35px;
+    }
+
+  }
+
+  .heart{
+    display: block;
+    text-decoration: none;
+    color: #f44336;
+  }      
+
+  .heart::before {
+    font-family: FontAwesome;
+    content: '\f08a';
+    font-size: responsive 20px 35px;
+  }  
 
   .HospesHead{
     background: var(--bg-header); 
@@ -69,7 +106,7 @@
       background-position: center center;
 
       @media (--mobile){
-        background-image: url('/img/dev-mob.jpg');
+        background-image: url('assets/img/dev-mob.jpg');
         height: 400px;
       }
     }
@@ -320,11 +357,12 @@
   }
   
   .blogsContents{
+
     &-img{
       display: block;
       max-width: 100%;
     }
-    
+
     &-textContent{
       display: flex;
       flex-flow: column nowrap;
@@ -340,8 +378,17 @@
         @media (--icons){
           padding: 0 15px 25px 15px; 
         }
-      }
+      }  
     }
+
+    &-number{
+      display: flex;
+      flex-flow: row;
+      
+      &-num{
+        font-size: responsive 18px 22px;
+      }
+    }    
 
     &-icons{
       display: flex;
@@ -355,17 +402,6 @@
       @media (--icons){
         padding: 0 15px 25px 15px; 
       }
-
-      &-heart{
-        text-decoration: none;
-        color: black;
-      }      
-
-      &-heart::before {
-        font-family: FontAwesome;
-        content: '\f08a';
-        font-size: responsive 20px 35px;
-      }
       
       &-share{
         color: black;
@@ -376,8 +412,8 @@
         font-family: FontAwesome;
         content: '\f079';
         font-size: responsive 16px 35px;
-      }      
-    }
+      }            
+    }       
 
     &-boxComments{
       background-color: #A5A5AF;

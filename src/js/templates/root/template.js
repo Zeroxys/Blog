@@ -25,7 +25,7 @@ yo`<section class="landing">
         <section class="HospesContents-About">
           <div class="HospesContents-div">
             <h2 class="HospesContents-div-title">About</h2>
-            <img src="img/AboutSvg.svg">
+            <img src="/img/AboutSvg.svg">
             <p class="HospesContents-div-content">Quieres saber un poco mas de mi vida ? cosas a las que dedico mis tiempos libres? Te invito a cotillear un poco mas Sobre Mi</p>
             <a class="HospesContents-button" href="/about">Ver Mas..</a>        
           </div>
@@ -34,7 +34,7 @@ yo`<section class="landing">
         <section class="HospesContents-Blog ">
           <div class="HospesContents-div">
             <h2 class="HospesContents-div-title">Blog</h2>
-            <img src="img/blogSvg.svg">
+            <img src="/img/blogSvg.svg">
             <p class="HospesContents-div-content">Una serie de catastroficas desdichas convertidas en Blogs, Aqui podras encontrar uno que otro tutorial que espero te sea de utilidad. No olvides compartirlas ;)</p>
             <a class="HospesContents-button-b" href="/blog">Ver Mas..</a>
           </div>        
@@ -43,7 +43,7 @@ yo`<section class="landing">
         <section class="HospesContents-Works ">
           <div class="HospesContents-div">
             <h2 class="HospesContents-div-title">Works</h2>
-            <img src="img/WorkSvg.svg">          
+            <img src="/img/WorkSvg.svg">          
             <p class="HospesContents-div-content">Empresas en las que he trabajado ?  Pff, Mejor te muestro un poco sobre los proyectos que he desarrollado. Lo se, no son muchos pero por algo se empieza ;)</p>
             <a class="HospesContents-button" href="/works">Ver Mas..</a>
           </div>        

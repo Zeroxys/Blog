@@ -12,6 +12,7 @@ app.use (bodyParser.json());
 app.use(morgan(':status :req[x-real-ip] :method :response-time ms :url'));
 app.use(serveStatic('./dist/'));
 
+
 app.get('/', (req,res) => {
   res.status(200).sendfile('./dist/index.html')
 });
@@ -27,29 +28,42 @@ app.get('/blog', (req,res) => {
 
 app.get('/api/blogs', (req,res) => {
   
-  var blogs = [{blog:{
-                  title:'Este es el primer blog',
-                  imageUrl:'http://bit.ly/2j3Ho0X',
-                  previewBlog:'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
-                },
-                urlBlog:'/primer-blog',
-                likes:16,
-                liked:true,
-                comments:8
-               },
+  var blogs = [
+  {blog:{
+      title:'Este es el Primer blog',
+      imageUrl:'https://hiringsolved.com/blog/assets/iphone-developer-developer.jpg',
+      previewBlog:'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
+      content:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vitae nemo quis est fugiat itaque, ducimus dolorem in laboriosam provident id quas non facilis tenetur dolorum perspiciatis amet. Quo, quidem?'
+    },
+    urlBlog:'/blog/primer-blog',
+    likes:16,
+    liked:false,
+    comments:8
+   },
 
-               {blog:{
-                  title:'Este es el segundo blog',
-                  imageUrl:'http://bit.ly/2j3Ho0X',
-                  previewBlog:'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
-                },
-                urlBlog:'/primer-blog',
-                likes:16,
-                liked:true,
-                comments:8
-               }];
+   {blog:{
+      title:'Este es el Segundo blog',
+      imageUrl:'http://bit.ly/2j3Ho0X',
+      previewBlog:'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
+    },
+    urlBlog:'/blog/segundo-blog',
+    likes:5,
+    liked:false,
+    comments:8
+   },
+
+   {blog:{
+      title:'Este es el Tercer blog',
+      imageUrl:'http://virtualrealityobserver.com/wp-content/uploads/2016/10/20151120193840-code-coding-programming-css-macbook-laptop-computer-technology-working-business-web-design-developer-.jpeg',
+      previewBlog:'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
+    },
+    urlBlog:'/blog/tercer-blog',
+    likes:5,
+    liked:false,
+    comments:8
+  }];
                
-  res.send(blogs);
+res.send(blogs);
 
 });
 
@@ -57,7 +71,7 @@ app.get('/works', (req,res) => {
   res.status(200).sendfile('./dist/index.html');
 });
 
-app.get('/api/:blogsContent', (req,res) => {
+app.get('/api/blogs/:blogsContent', (req,res) => {
   
   var contents = {
     title:'titulo del blog',
@@ -69,13 +83,26 @@ app.get('/api/:blogsContent', (req,res) => {
   res.send(contents);
 })
 
-app.get('*', (req,res) => {
-  res.status(404).sendfile('./dist/index.html');
+app.get('/api/pictures', (req,res) => {
+
+  var pictures = [
+            {image:'http://kingofwallpapers.com/developer/developer-004.jpg'},
+            {image:'http://kingofwallpapers.com/developer/developer-004.jpg'},
+            {image:'http://kingofwallpapers.com/developer/developer-004.jpg'}
+  ]
+  res.send(pictures)
 });
 
-app.get('/:blogs', (req,res) => {
+
+
+
+app.get('/blog/:blogs', (req,res) => {
   res.status(200).sendfile('./dist/index.html');
   console.log(req.params.blogs);
+});
+
+app.get('*', (req,res) => {
+  res.status(404).sendfile('./dist/index.html');
 });
 
 app.listen(port, (err) => {
