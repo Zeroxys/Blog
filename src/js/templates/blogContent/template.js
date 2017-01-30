@@ -18,8 +18,8 @@ module.exports = function blogsContents(blog){
 
         <section class="blogsContents-icons u-wrapper">
           <div class="blogsContents-number ${blog[0].liked ? 'liked' : ''}">
-            <a  href="#" onclick=${like} class="blogsContents heart"></a>
-            <a  href="#" onclick=${dislike} class="blogsContents heartdislike"></a>
+            <a  href="#" onclick=${like.bind(null, true)} class="blogsContents heart"></a>
+            <a  href="#" onclick=${like.bind(null, false)} class="blogsContents heartdislike"></a>
             <span class="blogsContents-number-num">${blog[0].likes}</span>
           </div>
           <a href="#" class="blogsContents-icons-share"></a>
@@ -33,21 +33,13 @@ module.exports = function blogsContents(blog){
       </section>`;
   }
 
-  function like(){
-    blog[0].liked = true;
-    blog[0].likes++;
+  function like(liked){
+    blog[0].liked = liked;
+    blog[0].likes += liked ? 1 : -1;
     var newEl = render(blog);
     yo.update(el,newEl);
     return false;
   }
-
-  function dislike(){
-    blog[0].liked = false;
-    blog[0].likes--;
-    var newEl = render(blog);
-    yo.update(el,newEl);
-    return false;
-  }  
 
   el = render(blog);
 

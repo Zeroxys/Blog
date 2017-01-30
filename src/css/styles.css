@@ -106,7 +106,7 @@
       background-position: center center;
 
       @media (--mobile){
-        background-image: url('assets/img/dev-mob.jpg');
+        background-image: url('/img/dev-mob.jpg');
         height: 400px;
       }
     }
@@ -146,6 +146,7 @@
     &-About{
       background:var(--fontWhiteColor);
       color:var(--fontBlogColor);
+      width: 100%;
 
       &-content{ 
         display: flex;
@@ -183,7 +184,8 @@
     &-Blog{
       background:var(--bg-header);
       color:var(--fontWhiteColor);
-      
+      width: 100%;
+
       &-Principal{
         display: flex;
         flex-flow: column nowrap;
@@ -266,11 +268,12 @@
 
         &-content{ 
           color: var(--fontWhiteColor);
+          margin-top: 45px;
           &-title{
             margin: 0;
             padding:0;
             text-align: center;
-            font-size:responsive 18px 32px;
+            font-size:responsive 20px 28px;
           }
           &-text{
             width:350px;
@@ -311,13 +314,17 @@
       color:var(--fontBlogColor);
       display: flex;
       align-content:center;
+      width: 100%;
     }
     
     &-div{
       display: flex;
       flex-flow: column nowrap;
-      align-items: center;  
-      width: 100%;
+      align-items: center;
+
+      @media (--mobile){
+        height: 450px;
+      }
 
       &-title{
         font-size: responsive 25px 36px;

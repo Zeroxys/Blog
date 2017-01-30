@@ -26,16 +26,20 @@ yo`<section class="landing">
           <div class="HospesContents-div">
             <h2 class="HospesContents-div-title">About</h2>
             <img src="/img/AboutSvg.svg">
-            <p class="HospesContents-div-content">Quieres saber un poco mas de mi vida ? cosas a las que dedico mis tiempos libres? Te invito a cotillear un poco mas Sobre Mi</p>
+            <div class="HospesContents-div-content">
+              <p>Quieres saber un poco mas de mi vida ? cosas a las que dedico mis tiempos libres? Te invito a cotillear un poco mas Sobre Mi</p>
+            </div>
             <a class="HospesContents-button" href="/about">Ver Mas..</a>        
           </div>
         </section>
 
-        <section class="HospesContents-Blog ">
+        <section class="HospesContents-Blog">
           <div class="HospesContents-div">
-            <h2 class="HospesContents-div-title">Blog</h2>
+            <h2 class="HospesContents-div-title">Blogs</h2>
             <img src="/img/blogSvg.svg">
-            <p class="HospesContents-div-content">Una serie de catastroficas desdichas convertidas en Blogs, Aqui podras encontrar uno que otro tutorial que espero te sea de utilidad. No olvides compartirlas ;)</p>
+            <div class="HospesContents-div-content">
+              <p>Una serie de catastroficas desdichas convertidas en Blogs, Aqui podras encontrar uno que otro tutorial que espero te sea de utilidad. No olvides compartirlas ;)</p>
+            </div>
             <a class="HospesContents-button-b" href="/blog">Ver Mas..</a>
           </div>        
         </section>
@@ -43,12 +47,13 @@ yo`<section class="landing">
         <section class="HospesContents-Works ">
           <div class="HospesContents-div">
             <h2 class="HospesContents-div-title">Works</h2>
-            <img src="/img/WorkSvg.svg">          
-            <p class="HospesContents-div-content">Empresas en las que he trabajado ?  Pff, Mejor te muestro un poco sobre los proyectos que he desarrollado. Lo se, no son muchos pero por algo se empieza ;)</p>
+            <img src="/img/WorkSvg.svg">
+            <div class="HospesContents-div-content">          
+              <p>Empresas en las que he trabajado ?  Pff, Mejor te muestro un poco sobre los proyectos que he desarrollado. Lo se, no son muchos pero por algo se empieza ;)</p>
+            </div>
             <a class="HospesContents-button" href="/works">Ver Mas..</a>
           </div>        
         </section>
-
       </section>
 
 </section>`;
