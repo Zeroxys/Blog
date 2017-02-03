@@ -2,6 +2,8 @@
 @import "./variables.css";
 @import "./media.css";
 @import "./mixins.css";
+@import "./spinner.css";
+@import "tingle.js/dist/tingle.min.css";
 
 .HospesBody{
   background:var(--fontWhiteColor);
@@ -77,8 +79,9 @@
       display: flex;
       flex-flow:row wrap;
       &-item{
+        position:relative;
         margin: 0 8px;
-        font-size: responsive 16px 22px;
+        font-size: responsive 18px 25px;
         list-style: none;
 
         &-link{
@@ -89,8 +92,26 @@
           transition-timing-function: ease-in-out;
         }
         &-link:hover{
-          border-bottom: 1px solid red;
-          color: red;
+          color: var(--linkColor);
+        }
+        &-link:before{
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: red;
+          visibility: hidden;
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+          -webkit-transition: all 0.3s ease-in-out 0s;
+          transition: all 0.3s ease-in-out 0s;
+        }
+        &-link:hover:before{
+          visibility: visible;
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
         }
       }
     }
@@ -242,6 +263,7 @@
         width: 450px;
         height: 750px;
         border-radius: 5px;
+        box-shadow: 5px 5px 20px var(--bg-header);
 
         
         @media (--mobile){
@@ -487,4 +509,10 @@
       }
     }
   }
+}
+
+/*Galeria de works*/
+.gallery{
+  width: 300px;
+  height: 300px;
 }

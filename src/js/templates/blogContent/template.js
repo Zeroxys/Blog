@@ -1,4 +1,5 @@
 const yo = require('yo-yo');
+const moment = require('moment');
 const landing = require('../landing');
 
 module.exports = function blogsContents(blog){
@@ -8,6 +9,7 @@ module.exports = function blogsContents(blog){
   function render(blogContent) {
     return yo`<section class="blogsContents">
         <img src="${blogContent[0].blog.imageUrl}" class="blogsContents-img"/>
+        <small>${moment(blogContent[0].createdAt).format('LL')}</small>
 
         <section class="blogsContents-textContent u-wrapper">
           <h2 class="blogsContents-textContent-title">${blogContent[0].blog.title}</h2>

@@ -4,7 +4,7 @@ const landing = require('../landing');
 const box = 
 yo`<section class="HospesContents-About-content u-wrapper">
 
-      <img class="HospesContents-About-content-img" src="img/dev.jpg"/>
+      <img class="HospesContents-About-content-img" src="http://www.celebdirtylaundry.com/wp-content/uploads/ian-somerhalder3.jpg"/>
       
       <div class="HospesContents-About-content-text u-wrapper">
         <h1 class="HospesContents-About-content-title">Lorem ipsum dolor</h1>

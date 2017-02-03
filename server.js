@@ -35,6 +35,7 @@ app.get('/api/blogs', (req,res) => {
       previewBlog:'Lorem ipsum dolor sit amet, consectetur adipisicing equist? Quasi sed, repudiandae.',
       content:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vitae nemo quis est fugiat itaque, ducimus dolorem in laboriosam provident id quas non facilis tenetur dolorum perspiciatis amet. Quo, quidem?'
     },
+    createdAt: new Date(),
     urlBlog:'/blog/primer-blog',
     likes:16,
     liked:false,
@@ -62,8 +63,12 @@ app.get('/api/blogs', (req,res) => {
     liked:false,
     comments:8
   }];
-               
-res.send(blogs);
+
+
+  setTimeout( function () {
+    res.send(blogs);
+  },1000);               
+
 
 });
 

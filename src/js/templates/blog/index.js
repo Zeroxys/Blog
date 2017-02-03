@@ -5,7 +5,7 @@ const template = require('../renderBlogs');
 //var request = require('superagent');
 var axios = require('axios');
 
-page('/blog', loadBlogsAxios, function(ctx,next){
+page('/blog', loading,loadBlogsAxios, function(ctx,next){
   title('Blog-about');
   var cont = document.getElementById('Contenido');
 
@@ -24,6 +24,16 @@ page('/blog', loadBlogsAxios, function(ctx,next){
     })
 }*/
 
+//Midleware del spinner
+function loading (ctx,next) {
+  var cont = document.getElementById('Contenido');
+  var el = document.createElement('div');
+  el.classList.add('loader');
+
+  empty(cont).appendChild(el);
+
+  next();
+}
 
 //peticion con AXIOS usando promises
 function  loadBlogsAxios (ctx,next){
