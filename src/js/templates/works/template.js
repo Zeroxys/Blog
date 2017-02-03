@@ -2,6 +2,37 @@ const yo = require('yo-yo');
 const tingle = require('tingle.js');
 const landing = require('../landing');
   
+  var contenido = yo`<section>
+    <h2>Soy el contenido</h2>  
+  </section>`
+
+
+module.exports = function works(pictures){
+
+  var el = yo`<section>
+
+    ${modal.setContent(contenido)}
+
+    <h2>Trabajos</h2>
+    <h3>Aqui podras ver algunos de los trabajos que he realizado y una breve descripcion de ellos, podras ver el codigo de los mismos en mi cuenta de github</h3>
+
+    <div class="gallery u-wrapper">
+      ${pictures.map(function(pic){
+          return yo`<section class="gallery-container">
+            <img class="gallery-items" src="${pic.image}">
+              ${modal.addFooterBtn('Ver mas...', 'tingle-btn tingle-btn--primary', function (){
+                modal.open();
+              })}
+            </img>
+          </section>`;
+      })}
+    </div>
+
+  </section>`;
+
+  return landing(el)    
+}
+
 var modal = new tingle.modal({
   footer:true,
   stickyFooter:false,
@@ -14,27 +45,3 @@ var modal = new tingle.modal({
     console.log("modal close");
   }
 })
-
-module.exports = function works(pictures){
-
-  var el = yo`<section>
-
-    ${modal.setContent('<h1>here\'s some content</h1>')}
-
-    ${modal.addFooterBtn('Button', 'tingle-btn tingle-btn--primary', function() {
-        modal.open();
-    })}
-
-    <h2>Aqui ira la galeria de trabajos realizados</h2>
-    <h3>PROXIMAMENTE</h3>
-      <section>
-        ${pictures.map(function(pic){
-            return yo`<section id="modal">
-              <img class="gallery" src="${pic.image}"></img>
-            </section>`;
-        })}
-      </section>
-  </section>`;
-
-  return landing(el)    
-}

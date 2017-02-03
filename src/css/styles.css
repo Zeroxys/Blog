@@ -513,6 +513,30 @@
 
 /*Galeria de works*/
 .gallery{
-  width: 300px;
-  height: 300px;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  border:1px solid blue;
+  padding:50px 0 50px 0;
+  &-container{
+    display: flex;
+    flex-flow: column;
+    margin:10px;
+    padding:20px;
+    background-color: #373737;
+    box-shadow: 5px 5px 20px var(--bg-header);
+  }
+  &-items{
+    margin: 5px;
+    width: 200px;
+    height: 200px;   
+    display: flex;
+    flex-direction: space-between;
+    align-items: center;
+  }
+}
+
+.tingle-btn--primary{
+  background-color: #373737;
+  border:solid 1px var(--bg-body);
 }

@@ -8622,8 +8622,9 @@ function pictures(ctx, next) {
 },{"./template.js":60,"axios":1,"empty-element":29,"page":39,"title":42}],60:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['<section>\n\n    ', '\n\n    ', '\n\n    <h2>Aqui ira la galeria de trabajos realizados</h2>\n    <h3>PROXIMAMENTE</h3>\n      <section>\n        ', '\n      </section>\n  </section>'], ['<section>\n\n    ', '\n\n    ', '\n\n    <h2>Aqui ira la galeria de trabajos realizados</h2>\n    <h3>PROXIMAMENTE</h3>\n      <section>\n        ', '\n      </section>\n  </section>']),
-    _templateObject2 = _taggedTemplateLiteral(['<section id="modal">\n              <img class="gallery" src="', '"></img>\n            </section>'], ['<section id="modal">\n              <img class="gallery" src="', '"></img>\n            </section>']);
+var _templateObject = _taggedTemplateLiteral(['<section>\n    <h2>Soy el contenido</h2>  \n  </section>'], ['<section>\n    <h2>Soy el contenido</h2>  \n  </section>']),
+    _templateObject2 = _taggedTemplateLiteral(['<section>\n\n    ', '\n\n    <h2>Trabajos</h2>\n    <h3>Aqui podras ver algunos de los trabajos que he realizado y una breve descripcion de ellos, podras ver el codigo de los mismos en mi cuenta de github</h3>\n\n    <div class="gallery u-wrapper">\n      ', '\n    </div>\n\n  </section>'], ['<section>\n\n    ', '\n\n    <h2>Trabajos</h2>\n    <h3>Aqui podras ver algunos de los trabajos que he realizado y una breve descripcion de ellos, podras ver el codigo de los mismos en mi cuenta de github</h3>\n\n    <div class="gallery u-wrapper">\n      ', '\n    </div>\n\n  </section>']),
+    _templateObject3 = _taggedTemplateLiteral(['<section class="gallery-container">\n            <img class="gallery-items" src="', '">\n              ', '\n            </img>\n          </section>'], ['<section class="gallery-container">\n            <img class="gallery-items" src="', '">\n              ', '\n            </img>\n          </section>']);
 
 function _taggedTemplateLiteral(strings, raw) {
   return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
@@ -8632,6 +8633,19 @@ function _taggedTemplateLiteral(strings, raw) {
 var yo = require('yo-yo');
 var tingle = require('tingle.js');
 var landing = require('../landing');
+
+var contenido = yo(_templateObject);
+
+module.exports = function works(pictures) {
+
+  var el = yo(_templateObject2, modal.setContent(contenido), pictures.map(function (pic) {
+    return yo(_templateObject3, pic.image, modal.addFooterBtn('Ver mas...', 'tingle-btn tingle-btn--primary', function () {
+      modal.open();
+    }));
+  }));
+
+  return landing(el);
+};
 
 var modal = new tingle.modal({
   footer: true,
@@ -8645,16 +8659,5 @@ var modal = new tingle.modal({
     console.log("modal close");
   }
 });
-
-module.exports = function works(pictures) {
-
-  var el = yo(_templateObject, modal.setContent('<h1>here\'s some content</h1>'), modal.addFooterBtn('Button', 'tingle-btn tingle-btn--primary', function () {
-    modal.open();
-  }), pictures.map(function (pic) {
-    return yo(_templateObject2, pic.image);
-  }));
-
-  return landing(el);
-};
 
 },{"../landing":55,"tingle.js":41,"yo-yo":43}]},{},[45]);
