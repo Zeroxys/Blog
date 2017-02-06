@@ -26,6 +26,16 @@ app.get('/blog', (req,res) => {
   res.status(200).sendfile('./dist/index.html');
 });
 
+
+app.get('/works', (req,res) => {
+  res.status(200).sendfile('./dist/index.html');
+});
+
+app.get('/blog/:blogs', (req,res) => {
+  res.status(200).sendfile('./dist/index.html');
+  console.log(req.params.blogs);
+});
+
 app.get('/api/blogs', (req,res) => {
   
   var blogs = [
@@ -72,22 +82,6 @@ app.get('/api/blogs', (req,res) => {
 
 });
 
-app.get('/works', (req,res) => {
-  res.status(200).sendfile('./dist/index.html');
-});
-
-app.get('/api/blogs/:blogsContent', (req,res) => {
-  
-  var contents = {
-    title:'titulo del blog',
-    imageUrl:'http://bit.ly/2j3Ho0X',
-    blogContent:' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi unde a doloribus saepe provident amet, voluptate officiis explicabo deleniti. Natus deleniti odio laudantium voluptates doloribus, ut magni eveniet, maiores nulla.', 
-    liked:true
-  } 
-
-  res.send(contents);
-})
-
 app.get('/api/pictures', (req,res) => {
 
   var pictures = [
@@ -99,14 +93,6 @@ app.get('/api/pictures', (req,res) => {
             {image:'http://kingofwallpapers.com/developer/developer-004.jpg'}            
   ]
   res.send(pictures)
-});
-
-
-
-
-app.get('/blog/:blogs', (req,res) => {
-  res.status(200).sendfile('./dist/index.html');
-  console.log(req.params.blogs);
 });
 
 app.get('*', (req,res) => {

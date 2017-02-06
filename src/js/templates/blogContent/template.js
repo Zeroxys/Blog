@@ -4,12 +4,16 @@ const landing = require('../landing');
 
 module.exports = function blogsContents(blog){
 
+  console.log(blog);
+
   var el;
 
   function render(blogContent) {
     return yo`<section class="blogsContents">
         <img src="${blogContent[0].blog.imageUrl}" class="blogsContents-img"/>
-        <small>${moment(blogContent[0].createdAt).format('LL')}</small>
+        <div class="date">
+          <small>${moment(blogContent[0].createdAt).format('LL')}</small>
+        </div>
 
         <section class="blogsContents-textContent u-wrapper">
           <h2 class="blogsContents-textContent-title">${blogContent[0].blog.title}</h2>
@@ -29,9 +33,8 @@ module.exports = function blogsContents(blog){
 
         <section class="blogsContents-boxComments">
           <section class="blogsContents-boxComments-fbComments u-wrapper">
-            <div class="fb-comments" data-href="http://localhost:8080/content" data-width="100%" data-numposts="3"></div>
+            <div class="fb-comments" data-href="http://localhost:8080${blog[0].urlBlog}" data-numposts="3" mobile="data-mobile" width="100%"></div>
           </section>
-        </section>
       </section>`;
   }
 
