@@ -61,3 +61,11 @@
     transform: rotate(360deg);
   }
 }
+
+/*Centrando el spinner con flex*/
+.loaderCont{
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
