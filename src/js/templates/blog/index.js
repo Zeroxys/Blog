@@ -28,11 +28,12 @@ page('/blog', loading,loadBlogsAxios, function(ctx,next){
 function loading (ctx,next) {
   var cont = document.getElementById('Contenido');
   var el = document.createElement('div');
+  var container = document.createElement('div');
+
+  container.classList.add('spinnerCont');
   el.classList.add('loader');
 
-  empty(cont).appendChild(el);
-
-  next();
+  empty(cont).appendChild(container.appendChild(el));
 }
 
 //peticion con AXIOS usando promises

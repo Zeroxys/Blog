@@ -92,7 +92,7 @@
           transition-timing-function: ease-in-out;
         }
         &-link:hover{
-          color: var(--linkColor);
+          color:var(--fontWhiteColor);
         }
         &-link:before{
           content: "";
@@ -101,7 +101,7 @@
           height: 2px;
           bottom: 0;
           left: 0;
-          background-color: red;
+          background-color: #F5503F;
           visibility: hidden;
           -webkit-transform: scaleX(0);
           transform: scaleX(0);
@@ -373,14 +373,14 @@
       &-b:hover{
             background: var(--fontWhiteColor);
             color: var(--bg-header);
-            border-radius: 10px;
+            border-radius: 5px;
           }      
     }
 
     &-button:hover{
       background: var(--bg-header);
       color: var(--fontWhiteColor);
-      border-radius: 10px;
+      border-radius: 5px;
     }    
 
   }
@@ -504,7 +504,7 @@
         }
 
         &-color:hover{
-          fill:red;
+          fill:#F5503F;
         }
       }
     }
@@ -601,4 +601,9 @@
   @media (max-width: 540px){
     font-size: 2rem;
   } 
+}
+
+.spinnerCont{
+  background-color:red;
+  height: 800px;
 }
