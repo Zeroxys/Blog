@@ -9,14 +9,16 @@ const landing = require('../landing');
 
 module.exports = function works(pictures){
 
-  var el = yo`<section>
+  var el = yo`<section class="galleryCont">
 
     ${modal.setContent(contenido)}
+    
+    <div class="worksTitle">
+      <h2>Trabajos</h2>
+      <h3>Aqui podras ver algunos de los trabajos que he realizado y una breve descripcion de ellos, podras ver el codigo de los mismos en mi cuenta de github</h3>
+    </div>
 
-    <h2>Trabajos</h2>
-    <h3>Aqui podras ver algunos de los trabajos que he realizado y una breve descripcion de ellos, podras ver el codigo de los mismos en mi cuenta de github</h3>
-
-    <div class="gallery u-wrapper">
+    <div class="gallery">
       ${pictures.map(function(pic){
           return yo`<section class="gallery-container">
             <img class="gallery-items" src="${pic.image}">

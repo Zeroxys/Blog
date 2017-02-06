@@ -8354,9 +8354,7 @@ page('*', function (ctx, next) {
 
 var _templateObject = _taggedTemplateLiteral(['<h1>NOT FOUND 404</h1>'], ['<h1>NOT FOUND 404</h1>']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 
@@ -8381,9 +8379,7 @@ page('/about', function (ctx, next) {
 
 var _templateObject = _taggedTemplateLiteral(['<section class="HospesContents-About-content u-wrapper">\n\n      <img class="HospesContents-About-content-img" src="http://www.celebdirtylaundry.com/wp-content/uploads/ian-somerhalder3.jpg"/>\n      \n      <div class="HospesContents-About-content-text u-wrapper">\n        <h1 class="HospesContents-About-content-title">Lorem ipsum dolor</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n         voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n          repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n        </p>\n        <h1>asdsadas</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n         Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n         officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n         adipisci et quaerat.</p>\n        <h1>asdsadas</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n         Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n         officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n         adipisci et quaerat.</p>\n        <h1>asdsadas</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n         Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n         officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n         adipisci et quaerat.</p>\n        <h1>asdsadas</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n         Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n         officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n         adipisci et quaerat.</p>                   \n      </div>\n\n    </section>'], ['<section class="HospesContents-About-content u-wrapper">\n\n      <img class="HospesContents-About-content-img" src="http://www.celebdirtylaundry.com/wp-content/uploads/ian-somerhalder3.jpg"/>\n      \n      <div class="HospesContents-About-content-text u-wrapper">\n        <h1 class="HospesContents-About-content-title">Lorem ipsum dolor</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur\n         voluptatum maxime a minima laboriosam ad veritatis consequatur quia, dolor expedita\n          repellat deleniti officia ab, commodi inventore facilis repudiandae qui!\n        </p>\n        <h1>asdsadas</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n         Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n         officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n         adipisci et quaerat.</p>\n        <h1>asdsadas</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n         Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n         officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n         adipisci et quaerat.</p>\n        <h1>asdsadas</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n         Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n         officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n         adipisci et quaerat.</p>\n        <h1>asdsadas</h1>\n        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n         Nesciunt voluptatibus quos pariatur iusto repellendus fuga aut nihil impedit,\n         officiis dignissimos inventore aliquid, rem, cum quas necessitatibus temporibus\n         adipisci et quaerat.</p>                   \n      </div>\n\n    </section>']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 var landing = require('../landing');
@@ -8421,9 +8417,7 @@ function blogsContent(ctx, next) {
 
 var _templateObject = _taggedTemplateLiteral(['<section class="blogsContents">\n        <img src="', '" class="blogsContents-img"/>\n        <small>', '</small>\n\n        <section class="blogsContents-textContent u-wrapper">\n          <h2 class="blogsContents-textContent-title">', '</h2>\n          <p class="blogsContents-textContent-text">\n            ', '\n          </p>\n        </section>\n\n        <section class="blogsContents-icons u-wrapper">\n          <div class="blogsContents-number ', '">\n            <a  href="#" onclick=', ' class="blogsContents heart"></a>\n            <a  href="#" onclick=', ' class="blogsContents heartdislike"></a>\n            <span class="blogsContents-number-num">', '</span>\n          </div>\n          <a href="#" class="blogsContents-icons-share"></a>\n        </section>\n\n        <section class="blogsContents-boxComments">\n          <section class="blogsContents-boxComments-fbComments u-wrapper">\n            <div class="fb-comments" data-href="http://localhost:8080/content" data-width="100%" data-numposts="3"></div>\n          </section>\n        </section>\n      </section>'], ['<section class="blogsContents">\n        <img src="', '" class="blogsContents-img"/>\n        <small>', '</small>\n\n        <section class="blogsContents-textContent u-wrapper">\n          <h2 class="blogsContents-textContent-title">', '</h2>\n          <p class="blogsContents-textContent-text">\n            ', '\n          </p>\n        </section>\n\n        <section class="blogsContents-icons u-wrapper">\n          <div class="blogsContents-number ', '">\n            <a  href="#" onclick=', ' class="blogsContents heart"></a>\n            <a  href="#" onclick=', ' class="blogsContents heartdislike"></a>\n            <span class="blogsContents-number-num">', '</span>\n          </div>\n          <a href="#" class="blogsContents-icons-share"></a>\n        </section>\n\n        <section class="blogsContents-boxComments">\n          <section class="blogsContents-boxComments-fbComments u-wrapper">\n            <div class="fb-comments" data-href="http://localhost:8080/content" data-width="100%" data-numposts="3"></div>\n          </section>\n        </section>\n      </section>']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 var moment = require('moment');
@@ -8455,9 +8449,7 @@ module.exports = function blogsContents(blog) {
 
 var _templateObject = _taggedTemplateLiteral(['<section>\n  <section class="HospesContents-Blog-Principal">\n          <section class="HospesContents-Blog-Principal-titleContent">\n            <h2 class="HospesContents-Blog-Principal-titleContent-title">Blogs</h2>\n            <p class="HospesContents-Blog-Principal-titleContent-text">Una serie de catastroficas desdichas</p>\n          </section> \n\n          <section class="HospesContents-Blog-Principal-Contenido">\n            ', '\n          </section>                     \n  </section>\n  </section>'], ['<section>\n  <section class="HospesContents-Blog-Principal">\n          <section class="HospesContents-Blog-Principal-titleContent">\n            <h2 class="HospesContents-Blog-Principal-titleContent-title">Blogs</h2>\n            <p class="HospesContents-Blog-Principal-titleContent-text">Una serie de catastroficas desdichas</p>\n          </section> \n\n          <section class="HospesContents-Blog-Principal-Contenido">\n            ', '\n          </section>                     \n  </section>\n  </section>']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 
@@ -8470,9 +8462,7 @@ module.exports = function (blogs) {
 
 var _templateObject = _taggedTemplateLiteral(['<section class="HospesContents-Blog-Articulos">\n        <img class="HospesContents-Blog-Articulos-img" src=', '/>\n\n        <section class="HospesContents-Blog-Articulos-content">\n\n          <h2 class="HospesContents-Blog-Articulos-content-title">', '</h2>\n\n          <p class="HospesContents-Blog-Articulos-content-text" id="text-box">\n            ', '\n          </p>\n\n        </section>\n        <a class="HospesContents-Blog-Articulos-btn" href="', '">Ver mas...</a>\n\n        <section class="HospesContents-Blog-Articulos-content-commentBox">\n\n          <div>\n            <p>', ' Me gusta</p>\n          </div>\n\n          <div>\n            <p>', ' Comentarios</p>\n          </div>\n\n        </section>\n\n      </section>'], ['<section class="HospesContents-Blog-Articulos">\n        <img class="HospesContents-Blog-Articulos-img" src=', '/>\n\n        <section class="HospesContents-Blog-Articulos-content">\n\n          <h2 class="HospesContents-Blog-Articulos-content-title">', '</h2>\n\n          <p class="HospesContents-Blog-Articulos-content-text" id="text-box">\n            ', '\n          </p>\n\n        </section>\n        <a class="HospesContents-Blog-Articulos-btn" href="', '">Ver mas...</a>\n\n        <section class="HospesContents-Blog-Articulos-content-commentBox">\n\n          <div>\n            <p>', ' Me gusta</p>\n          </div>\n\n          <div>\n            <p>', ' Comentarios</p>\n          </div>\n\n        </section>\n\n      </section>']);
 
-function _taggedTemplateLiteral(strings, raw) {
-        return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 //Contenido de blocke
 var yo = require('yo-yo');
@@ -8536,9 +8526,7 @@ function loadBlogsAxios(ctx, next) {
 
 var _templateObject = _taggedTemplateLiteral(['', ''], ['', '']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 
@@ -8551,9 +8539,7 @@ module.exports = function landing(block) {
 
 var _templateObject = _taggedTemplateLiteral(['', ''], ['', '']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 var blogCont = require('../blogTemplates');
@@ -8587,9 +8573,7 @@ page('/', function (ctx, next) {
 
 var _templateObject = _taggedTemplateLiteral(['<section class="landing">\n\n      <section class="HospesPort" id="Portada">  \n        <div class="HospesPort-img">\n          \n        </div>\n      </section>\n\n\n      <section class="HospesBlogs u-wrapper" id="Bienvenida">\n        <section class="HospesBlogs-contents">\n          <h2 class="HospesBlogs-contents-title">Bienvenido</h2>\n          <p class="HospesBlogs-contents-content">He decidido abrir este sitio con la unica intencion de compartir todo aquello que para mi es interesante, ya sea sobre desarrollo web,historias de vida, javascript \u2764.\n          <br>\n          <br> \n          En cualquier caso si estas aqui es porque probablemente algun articulo te llamo la atencion, te invito a que sigas mis blogs y juntos podamos seguir aprendiendo un poco mas sobre la web.</p>\n        </section>\n      </section>\n\n      <section class="HospesContents"  id="HospesCont">\n\n        <section class="HospesContents-About">\n          <div class="HospesContents-div">\n            <h2 class="HospesContents-div-title">About</h2>\n            <img src="/img/AboutSvg.svg">\n            <div class="HospesContents-div-content">\n              <p>Quieres saber un poco mas de mi vida ? cosas a las que dedico mis tiempos libres? Te invito a cotillear un poco mas Sobre Mi</p>\n            </div>\n            <a class="HospesContents-button" href="/about">Ver Mas..</a>        \n          </div>\n        </section>\n\n        <section class="HospesContents-Blog">\n          <div class="HospesContents-div">\n            <h2 class="HospesContents-div-title">Blogs</h2>\n            <img src="/img/blogSvg.svg">\n            <div class="HospesContents-div-content">\n              <p>Una serie de catastroficas desdichas convertidas en Blogs, Aqui podras encontrar uno que otro tutorial que espero te sea de utilidad. No olvides compartirlas ;)</p>\n            </div>\n            <a class="HospesContents-button-b" href="/blog">Ver Mas..</a>\n          </div>        \n        </section>\n\n        <section class="HospesContents-Works ">\n          <div class="HospesContents-div">\n            <h2 class="HospesContents-div-title">Works</h2>\n            <img src="/img/WorkSvg.svg">\n            <div class="HospesContents-div-content">          \n              <p>Empresas en las que he trabajado ?  Pff, Mejor te muestro un poco sobre los proyectos que he desarrollado. Lo se, no son muchos pero por algo se empieza ;)</p>\n            </div>\n            <a class="HospesContents-button" href="/works">Ver Mas..</a>\n          </div>        \n        </section>\n      </section>\n\n</section>'], ['<section class="landing">\n\n      <section class="HospesPort" id="Portada">  \n        <div class="HospesPort-img">\n          \n        </div>\n      </section>\n\n\n      <section class="HospesBlogs u-wrapper" id="Bienvenida">\n        <section class="HospesBlogs-contents">\n          <h2 class="HospesBlogs-contents-title">Bienvenido</h2>\n          <p class="HospesBlogs-contents-content">He decidido abrir este sitio con la unica intencion de compartir todo aquello que para mi es interesante, ya sea sobre desarrollo web,historias de vida, javascript \u2764.\n          <br>\n          <br> \n          En cualquier caso si estas aqui es porque probablemente algun articulo te llamo la atencion, te invito a que sigas mis blogs y juntos podamos seguir aprendiendo un poco mas sobre la web.</p>\n        </section>\n      </section>\n\n      <section class="HospesContents"  id="HospesCont">\n\n        <section class="HospesContents-About">\n          <div class="HospesContents-div">\n            <h2 class="HospesContents-div-title">About</h2>\n            <img src="/img/AboutSvg.svg">\n            <div class="HospesContents-div-content">\n              <p>Quieres saber un poco mas de mi vida ? cosas a las que dedico mis tiempos libres? Te invito a cotillear un poco mas Sobre Mi</p>\n            </div>\n            <a class="HospesContents-button" href="/about">Ver Mas..</a>        \n          </div>\n        </section>\n\n        <section class="HospesContents-Blog">\n          <div class="HospesContents-div">\n            <h2 class="HospesContents-div-title">Blogs</h2>\n            <img src="/img/blogSvg.svg">\n            <div class="HospesContents-div-content">\n              <p>Una serie de catastroficas desdichas convertidas en Blogs, Aqui podras encontrar uno que otro tutorial que espero te sea de utilidad. No olvides compartirlas ;)</p>\n            </div>\n            <a class="HospesContents-button-b" href="/blog">Ver Mas..</a>\n          </div>        \n        </section>\n\n        <section class="HospesContents-Works ">\n          <div class="HospesContents-div">\n            <h2 class="HospesContents-div-title">Works</h2>\n            <img src="/img/WorkSvg.svg">\n            <div class="HospesContents-div-content">          \n              <p>Empresas en las que he trabajado ?  Pff, Mejor te muestro un poco sobre los proyectos que he desarrollado. Lo se, no son muchos pero por algo se empieza ;)</p>\n            </div>\n            <a class="HospesContents-button" href="/works">Ver Mas..</a>\n          </div>        \n        </section>\n      </section>\n\n</section>']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 
@@ -8623,12 +8607,10 @@ function pictures(ctx, next) {
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<section>\n    <h2>Soy el contenido</h2>  \n  </section>'], ['<section>\n    <h2>Soy el contenido</h2>  \n  </section>']),
-    _templateObject2 = _taggedTemplateLiteral(['<section>\n\n    ', '\n\n    <h2>Trabajos</h2>\n    <h3>Aqui podras ver algunos de los trabajos que he realizado y una breve descripcion de ellos, podras ver el codigo de los mismos en mi cuenta de github</h3>\n\n    <div class="gallery u-wrapper">\n      ', '\n    </div>\n\n  </section>'], ['<section>\n\n    ', '\n\n    <h2>Trabajos</h2>\n    <h3>Aqui podras ver algunos de los trabajos que he realizado y una breve descripcion de ellos, podras ver el codigo de los mismos en mi cuenta de github</h3>\n\n    <div class="gallery u-wrapper">\n      ', '\n    </div>\n\n  </section>']),
+    _templateObject2 = _taggedTemplateLiteral(['<section class="galleryCont">\n\n    ', '\n    \n    <div class="worksTitle">\n      <h2>Trabajos</h2>\n      <h3>Aqui podras ver algunos de los trabajos que he realizado y una breve descripcion de ellos, podras ver el codigo de los mismos en mi cuenta de github</h3>\n    </div>\n\n    <div class="gallery">\n      ', '\n    </div>\n\n  </section>'], ['<section class="galleryCont">\n\n    ', '\n    \n    <div class="worksTitle">\n      <h2>Trabajos</h2>\n      <h3>Aqui podras ver algunos de los trabajos que he realizado y una breve descripcion de ellos, podras ver el codigo de los mismos en mi cuenta de github</h3>\n    </div>\n\n    <div class="gallery">\n      ', '\n    </div>\n\n  </section>']),
     _templateObject3 = _taggedTemplateLiteral(['<section class="gallery-container">\n            <img class="gallery-items" src="', '">\n              ', '\n            </img>\n          </section>'], ['<section class="gallery-container">\n            <img class="gallery-items" src="', '">\n              ', '\n            </img>\n          </section>']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 var tingle = require('tingle.js');

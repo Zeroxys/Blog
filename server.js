@@ -93,7 +93,10 @@ app.get('/api/pictures', (req,res) => {
   var pictures = [
             {image:'http://kingofwallpapers.com/developer/developer-004.jpg'},
             {image:'http://kingofwallpapers.com/developer/developer-004.jpg'},
-            {image:'http://kingofwallpapers.com/developer/developer-004.jpg'}
+            {image:'http://kingofwallpapers.com/developer/developer-004.jpg'},
+            {image:'http://kingofwallpapers.com/developer/developer-004.jpg'},
+            {image:'http://kingofwallpapers.com/developer/developer-004.jpg'},
+            {image:'http://kingofwallpapers.com/developer/developer-004.jpg'}            
   ]
   res.send(pictures)
 });
