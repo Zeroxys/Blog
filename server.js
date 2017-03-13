@@ -4,7 +4,7 @@ const serveStatic = require('serve-static');
 const bodyParser = require('body-parser');
 const app = express();
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8181;
 
 app.set('engine','html');
 app.use(bodyParser.urlencoded({extended:false}));
@@ -37,7 +37,7 @@ app.get('/blog/:blogs', (req,res) => {
 });
 
 app.get('/api/blogs', (req,res) => {
-  
+
   var blogs = [
   {blog:{
       title:'Este es el Primer blog',
@@ -77,7 +77,7 @@ app.get('/api/blogs', (req,res) => {
 
   setTimeout( function () {
     res.send(blogs);
-  },1000);               
+  },1000);
 
 
 });
@@ -90,7 +90,7 @@ app.get('/api/pictures', (req,res) => {
             {image:'http://kingofwallpapers.com/developer/developer-004.jpg'},
             {image:'http://kingofwallpapers.com/developer/developer-004.jpg'},
             {image:'http://kingofwallpapers.com/developer/developer-004.jpg'},
-            {image:'http://kingofwallpapers.com/developer/developer-004.jpg'}            
+            {image:'http://kingofwallpapers.com/developer/developer-004.jpg'}
   ]
   res.send(pictures)
 });
